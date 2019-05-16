@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>BookMart</title>
+
+
+  <!-- Animate.CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+  <!-- jQuery-UI Framework -->
+  <script src="assets\js\jQueryUI\jquery-ui.min.js"></script>
+  <link href="assets\js\jQueryUI\jquery-ui.structure.min.css" rel="stylesheet" />
+  <link href="assets\js\jQueryUI\jquery-ui.min.css" rel="stylesheet" />
+
+
+  <!-- Popper CSN (Bootstrap 4 requires this to work)-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+
+  <!-- Bootstrap CDN -->
+
+  <link href="https://bootswatch.com/4/cosmo/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Cosmo from bootswatch -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+
+
+  <!-- Bootstrap Overrides - JONES -->
+  <link href="assets/css/bootstrap.overrides.css" rel="stylesheet" />
+  <link href="assets/css/bootstrap.xxl.css" rel="stylesheet" />
+
+  <!-- Strawberry CSS - JONES -->
+  <link href="assets/css/strawberry.css" rel="stylesheet" />
+  <link href="assets/css/strawberry.min.768.css" rel="stylesheet" />
+  <!-- Responsive CSS -->
+  <link href="assets/css/strawberry.utilities.css" rel="stylesheet" />
+  <!-- Utility CSS -->
+
+  <!-- Strawberry JS - JONES -->
+  <script src="assets/js/strawberry.core.js"></script>
+  <script src="assets/js/strawberry.js"></script>
+
+  <link href="assets/css/app_modules/books.new.css" rel="stylesheet" />
+  <script src="assets/js/app_modules/books.new.js"></script>
+
+</head>
+
+<body>
+
+  <div id="wrapper" class="toggled">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper" class="d-none d-lg-block">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a href="/">
+
+            <img class="sidebar-logo" src="assets/img/logo.png" />
+          </a>
+        </li>
+        <li class="sidebar-user clearfix">
+          <span class="sidebar-user-image">
+            <img src="assets/img/astrid_farnsworth.jpg" />
+          </span>
+          <span class="sidebar-user-name">
+            <h6 class="mb-0">Astrid Farnsworth</h6>
+            <small class="sidebar-user-role">adtridfarnsworth@gmail.com</small>
+            <div class="sidebar-user-logout"><a href="#">Logout</a></div>
+          </span>
+        </li>
+
+        <li>
+          <a href="index.html">
+            <i class="fas fa-home fa-fw mr-1"></i> Home
+          </a>
+        </li>
+
+
+        <li class="">
+          <a href="#">
+            <i class="fas fa-book fa-fw mr-1"></i> Book Requests
+          </a>
+        </li>
+
+        <li class="">
+          <a href="#">
+            <i class="fas fa-box-open fa-fw mr-1"></i> Order Status
+          </a>
+        </li>
+
+        <li class="">
+          <a href="#">
+            <i class="fas fa-undo fa-fw mr-1"></i> Return Requests
+          </a>
+        </li>
+
+        <li class="">
+          <a href="my_books.html">
+            <i class="fas fa-boxes fa-fw mr-1"></i> My Books
+          </a>
+        </li>
+
+        <li class="">
+          <a href="#">
+            <i class="fas fa-comment-dots fa-fw mr-1"></i> Customer Feedback
+          </a>
+        </li>
+
+      </ul>
+    </div>
+    <!--/ Sidebar -->
+
+    <!-- Page -->
+    <div id="page-content-wrapper">
+      <div class="page-header clearfix">
+
+        <div class="float-left">
+          <i class="fas fa-bars menu-toggle"></i>
+
+          <div class="header-title">
+            New Book
+          </div>
+
+        </div>
+
+        <!-- <div class="float-right">
+          <a class="btn btn-sm btn-warning" style="padding:7px 15px;" href="new_book.html">
+            <i class="fas fa-plus mr-1"></i>
+            Add New Book</a>
+        </div> -->
+
+      </div>
+      <div class="workspace p-4" id="workspace">
+
+        <!-- Breadcrumbs -->
+        <div class="breadcrumb-wrapper" aria-label="Breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home"></i></a></li>
+            <li class="breadcrumb-item active" aria-current="page">My Books</li>
+          </ol>
+        </div>
+
+        <!-- Main content goes here -->
+
+        <label>Fill the following details to add a new book</label>
+
+        <div class="row">
+          <div class="col-md-5">
+            <div class="card shadow-sm border-0 rounded mb-3">
+              <div class="card-body">
+                <h4>Images</h4>
+                <div class="input-group mb-3">
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile01"
+                      aria-describedby="inputGroupFileAddon01">
+                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                  </div>
+                </div>
+                <div class="text-muted">Put a checkmark on the primary image</div>
+                <div class="book-images">
+                  <div class="img">
+                    <img src="assets/img/books/3423434.1.jpg" />
+
+                    <div class="custom-control custom-checkbox">
+                      <input type="radio" id="primaryImage1" name="primaryImage" class="custom-control-input" checked>
+                      <label class="custom-control-label" for="primaryImage1"></label>
+                    </div>
+                  </div>
+                  <div class="img">
+                    <img src="assets/img/books/3423434.1.jpg" />
+
+                    <div class="custom-control custom-checkbox">
+                      <input type="radio" id="primaryImage2" name="primaryImage" class="custom-control-input">
+                      <label class="custom-control-label" for="primaryImage2"></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card shadow-sm border-0 rounded">
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Describe condition of the book</label>
+                  <div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="bookCondtion1" name="bookCondtion" class="custom-control-input">
+                      <label class="custom-control-label" for="bookCondtion1">This is a brand new book</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="bookCondtion2" name="bookCondtion" class="custom-control-input">
+                      <label class="custom-control-label" for="bookCondtion2">This is a used book</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-7">
+            <div class="card shadow-sm border-0 rounded">
+              <div class="card-body">
+                <h4>Book Details</h4>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label>Full Book Name</label>
+                      <div class="dropdown">
+                        <input class="form-control form-control-sm" data-toggle="dropdown" />
+                        <div class="dropdown-menu shadow-lg rounded border-0 books-suggestion" style="min-width:400px;">
+
+                          <div class="dropdown-item clearfix">
+
+                            <img class="float-left" src="assets/img/books/9781439.1.jpg" style="width:30px;" />
+                            <div class="float-left pl-3">
+                              <div>Suggested Book Name</div>
+                              <div class="text-muted small">Author Name</div>
+                            </div>
+
+                          </div>
+                          <div class="dropdown-item clearfix">
+
+                            <img class="float-left" src="assets/img/books/3423434.1.jpg" style="width:30px;" />
+                            <div class="float-left pl-3">
+                              <div>Suggested Book Name</div>
+                              <div class="text-muted small">Author Name</div>
+                            </div>
+
+                          </div>
+                          <div class="dropdown-item clearfix">
+
+                            <img class="float-left" src="assets/img/books/2312414.1.jpg" style="width:30px;" />
+                            <div class="float-left pl-3">
+                              <div>Suggested Book Name</div>
+                              <div class="text-muted small">Author Name</div>
+                            </div>
+
+                          </div>
+                          <div class="dropdown-item clearfix">
+
+                            <img class="float-left" src="assets/img/books/978935.1.jpg" style="width:30px;" />
+                            <div class="float-left pl-3">
+                              <div>Suggested Book Name</div>
+                              <div class="text-muted small">Author Name</div>
+                            </div>
+
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Author</label>
+                      <input class="form-control form-control-sm" />
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Publication</label>
+                      <input class="form-control form-control-sm" />
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Edition</label>
+                      <input class="form-control form-control-sm" />
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Category</label>
+                      <button class="form-control form-control-sm text-left" data-toggle="modal"
+                        data-target="#mSelCategory"> Select
+                        category </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+    <!--/ Page -->
+
+  </div>
+  <!--/ Wrapper -->
+
+
+  <div class="modal fade" id="mSelCategory">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Select Category of Book</h4>
+        </div>
+        <div class="modal-body">
+          <div class="text-muted mb-4">Select primary category to continue...</div>
+
+          <div class="collapse cat-primary show">
+            <div class="list-group list-group-light list-group-sm" id="lstPrimary">
+              <div class="list-group-item list-group-item-action" data-toggle="collapse" data-target=".cat-primary">
+                Engineering
+              </div>
+
+              <div class="list-group-item list-group-item-action" data-toggle="collapse" data-target=".cat-primary">
+                Novel
+              </div>
+
+              <div class="list-group-item list-group-item-action" data-toggle="collapse" data-target=".cat-primary">
+                Medical
+              </div>
+
+              <div class="list-group-item list-group-item-action" data-toggle="collapse" data-target=".cat-primary">
+                Science
+              </div>
+            </div>
+          </div>
+
+
+          <div class="collapse cat-primary">
+            <div class="list-group list-group-light list-group-sm" id="lstSecondary">
+              <div class="list-group-item list-group-item-action" data-toggle="collapse" data-target=".cat-primary">
+                Mathematics
+              </div>
+
+              <div class="list-group-item list-group-item-action" data-toggle="collapse" data-target=".cat-primary">
+                Computer Science
+              </div>
+
+              <div class="list-group-item list-group-item-action" data-toggle="collapse" data-target=".cat-primary">
+                Electronics
+              </div>
+
+              <div class="list-group-item list-group-item-action" data-toggle="collapse" data-target=".cat-primary">
+                Others
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-success btn-sm" data-dismiss="modal">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+
+</html>

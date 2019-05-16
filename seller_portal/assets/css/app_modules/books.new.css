@@ -1,0 +1,27 @@
+.book-images {
+    position: relative;
+    box-shadow: inset 0 0 .25rem rgba(0, 0, 0, 0.2);
+    padding: .5rem;
+    background-color: #fafafa;
+}
+
+.book-images .img {
+    display: inline-block;
+    width: calc(25% - 5px);
+    margin-right: 5px;
+    position: relative;
+}
+
+.book-images .img .custom-checkbox {
+    position: absolute;
+    top: 2.5px;
+    right: -1.5px;
+}
+
+.book-images img {
+    width: 100%;
+}
+
+.books-suggestion .dropdown-item {
+    cursor: pointer;
+}
