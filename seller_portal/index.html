@@ -11,9 +11,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
   <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <!-- jQuery CDN -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -52,6 +51,14 @@
   <!-- Strawberry JS - JONES -->
   <script src="assets/js/strawberry.core.js"></script>
   <script src="assets/js/strawberry.js"></script>
+
+
+
+  <!-- page specific resources -->
+  <link rel="stylesheet" href="assets/css/app_modules/index.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+  <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
+  <script src="assets/js/app_modules/index.js"></script>
 
 </head>
 
@@ -137,12 +144,616 @@
             Add New Book</a>
         </div>
       </div>
-      <div class="workspace p-4" id="workspace">
+      <div class="workspace px-3 py-4 px-md-4" id="workspace">
+        <!-- Breadcrumbs -->
+        <div class="breadcrumb-wrapper" aria-label="Breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home"></i></a></li>
+
+          </ol>
+        </div>
 
         <!-- Main content goes here -->
 
+        <div class="row row-metrics">
+          <div class="col-6 col-md-3">
+            <div class="card border-0 shadow mb-4 rounded overflow-hidden text-white"
+              style="background: linear-gradient(130deg, #2680EB 50%, #7C3DE9 100%);">
+              <div class="card-body  text-center py-2 text-white">
+                <h6 class="mb-0">
+                  Books Sold
+                  <small class="d-block text-light">Total</small>
+                </h6>
+              </div>
+              <div class="card-body py-2 text-center">
+                <h2>254</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="card border-0 shadow mb-4 rounded overflow-hidden text-white"
+              style="background: linear-gradient(130deg, #16BFAE 50%, #3E7FE2 100%);">
+              <div class="card-body  text-center py-2">
+                <h6 class="mb-0">
+                  Books Sold
+                  <small class="text-light d-block">This month</small>
+                </h6>
+              </div>
+              <div class="card-body py-2 text-center">
+                <h2>254</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="card border-0 shadow mb-4 rounded overflow-hidden text-white"
+              style="background: linear-gradient(130deg, #EB2626 50%, #EC18AD 100%);">
+              <div class="card-body  text-center py-2">
+                <h6 class="mb-0">
+                  Pending Orders
+                  <small class="text-white d-block">This month</small>
+                </h6>
+              </div>
+              <div class="card-body py-2 text-center">
+                <h2>254</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="card border-0 shadow mb-4 rounded overflow-hidden text-white"
+              style="background: linear-gradient(130deg, #EB8926 50%, #E64747 100%);">
+              <div class="card-body  text-center py-2">
+                <h6 class="mb-0">
+                  Feedback
+                  <small class="text-light d-block">This month</small>
+                </h6>
+              </div>
+              <div class="card-body py-2 text-center">
+                <h2>254</h2>
+              </div>
+            </div>
+          </div>
+        </div>
 
 
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-7">
+            <div class="card border-0 shadow-sm mb-4">
+
+              <div class="card-body">
+                <button class="btn btn-card-right shadow hover-shadow" data-toggle="tooltip"
+                  title="View for this month"><i class="fas fa-calendar-alt"></i></button>
+                <h4 class="text-center mb-0 rev-chart-title">Revenue Summary</h4>
+                <div class="text-muted mt-1 text-center">This year</div>
+
+                <div class="mt-4" style="height:250px;">
+                  <canvas id="cnvRevenue" class="chartjs"></canvas>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-5">
+            <div class="card border-0 shadow-sm s">
+              <div class="card-body">
+                <button class="btn btn-card-right shadow hover-shadow reverse" data-toggle="tooltip" title="View all"><i
+                    class="fas fa-list"></i></button>
+                <h4 class="mb-0 pending-list-title">Pending Orders</h4>
+                <div class="text-muted mt-1">Most Delayed</div>
+
+                <div class="mt-4" style="height:250px;margin-left:-20px;margin-right:-20px;overflow-y:auto;">
+                  <div class="list-group list-group-mild list-group-flush list-pending-orders">
+                    <div class="list-group-item list-group-item-action">
+                      <img class="float-left" src="assets/img/books/9781439.1.jpg" style="width:35px;" />
+                      <div class="float-left pl-3">
+                        <div>Ordered Book Name</div>
+                        <div class="text-muted small">Author Name</div>
+                        <div class="text-primary small">Ordered on 14 Mar '19</div>
+                      </div>
+
+                      <div class="dropdown float-right dropdown-pending-options" data-toggle="tooltip"
+                        title="Change Status">
+                        <button class="btn btn-sm btn-light btn-pending-change-status" data-toggle="dropdown">
+                          <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                        <div class="dropdown-menu shadow border-0 rounded dropdown-menu-right">
+                          <span class="dropdown-item-text text-success">Change Order Status</span>
+                          <div class="dropdown-divider"></div>
+                          <button class="dropdown-item">
+                            Ready to dispatch
+                          </button>
+                          <button class="dropdown-item">
+                            Book Dispatched
+                          </button>
+                          <button class="dropdown-item">
+                            Order Cancelled
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="list-group-item list-group-item-action">
+                      <img class="float-left" src="assets/img/books/2312414.1.jpg" style="width:35px;" />
+                      <div class="float-left pl-3">
+                        <div>Ordered Book Name</div>
+                        <div class="text-muted small">Author Name</div>
+                        <div class="text-primary small">Ordered on 14 Mar '19</div>
+                      </div>
+
+                      <div class="dropdown float-right dropdown-pending-options" data-toggle="tooltip"
+                        title="Change Status">
+                        <button class="btn btn-sm btn-light btn-pending-change-status" data-toggle="dropdown">
+                          <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                        <div class="dropdown-menu shadow border-0 rounded dropdown-menu-right">
+                          <span class="dropdown-item-text text-success">Change Order Status</span>
+                          <div class="dropdown-divider"></div>
+                          <button class="dropdown-item">
+                            Ready to dispatch
+                          </button>
+                          <button class="dropdown-item">
+                            Book Dispatched
+                          </button>
+                          <button class="dropdown-item">
+                            Order Cancelled
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="list-group-item list-group-item-action">
+                      <img class="float-left" src="assets/img/books/3423434.1.jpg" style="width:35px;" />
+                      <div class="float-left pl-3">
+                        <div>Ordered Book Name</div>
+                        <div class="text-muted small">Author Name</div>
+                        <div class="text-primary small">Ordered on 14 Mar '19</div>
+                      </div>
+
+                      <div class="dropdown float-right dropdown-pending-options" data-toggle="tooltip"
+                        title="Change Status">
+                        <button class="btn btn-sm btn-light btn-pending-change-status" data-toggle="dropdown">
+                          <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                        <div class="dropdown-menu shadow border-0 rounded dropdown-menu-right">
+                          <span class="dropdown-item-text text-success">Change Order Status</span>
+                          <div class="dropdown-divider"></div>
+                          <button class="dropdown-item">
+                            Ready to dispatch
+                          </button>
+                          <button class="dropdown-item">
+                            Book Dispatched
+                          </button>
+                          <button class="dropdown-item">
+                            Order Cancelled
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="list-group-item list-group-item-action">
+                      <img class="float-left" src="assets/img/books/978935.1.jpg" style="width:35px;" />
+                      <div class="float-left pl-3">
+                        <div>Ordered Book Name</div>
+                        <div class="text-muted small">Author Name</div>
+                        <div class="text-primary small">Ordered on 14 Mar '19</div>
+                      </div>
+
+                      <div class="dropdown float-right dropdown-pending-options" data-toggle="tooltip"
+                        title="Change Status">
+                        <button class="btn btn-sm btn-light btn-pending-change-status" data-toggle="dropdown">
+                          <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                        <div class="dropdown-menu shadow border-0 rounded dropdown-menu-right">
+                          <span class="dropdown-item-text text-success">Change Order Status</span>
+                          <div class="dropdown-divider"></div>
+                          <button class="dropdown-item">
+                            Ready to dispatch
+                          </button>
+                          <button class="dropdown-item">
+                            Book Dispatched
+                          </button>
+                          <button class="dropdown-item">
+                            Order Cancelled
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="list-group-item list-group-item-action">
+                      <img class="float-left" src="assets/img/books/9781439.1.jpg" style="width:35px;" />
+                      <div class="float-left pl-3">
+                        <div>Ordered Book Name</div>
+                        <div class="text-muted small">Author Name</div>
+                        <div class="text-primary small">Ordered on 14 Mar '19</div>
+                      </div>
+
+                      <div class="dropdown float-right dropdown-pending-options" data-toggle="tooltip"
+                        title="Change Status">
+                        <button class="btn btn-sm btn-light btn-pending-change-status" data-toggle="dropdown">
+                          <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                        <div class="dropdown-menu shadow border-0 rounded dropdown-menu-right">
+                          <span class="dropdown-item-text text-success">Change Order Status</span>
+                          <div class="dropdown-divider"></div>
+                          <button class="dropdown-item">
+                            Ready to dispatch
+                          </button>
+                          <button class="dropdown-item">
+                            Book Dispatched
+                          </button>
+                          <button class="dropdown-item">
+                            Order Cancelled
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="list-group-item list-group-item-action">
+                      <img class="float-left" src="assets/img/books/2312414.1.jpg" style="width:35px;" />
+                      <div class="float-left pl-3">
+                        <div>Ordered Book Name</div>
+                        <div class="text-muted small">Author Name</div>
+                        <div class="text-primary small">Ordered on 14 Mar '19</div>
+                      </div>
+
+                      <div class="dropdown float-right dropdown-pending-options" data-toggle="tooltip"
+                        title="Change Status">
+                        <button class="btn btn-sm btn-light btn-pending-change-status" data-toggle="dropdown">
+                          <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                        <div class="dropdown-menu shadow border-0 rounded dropdown-menu-right">
+                          <span class="dropdown-item-text text-success">Change Order Status</span>
+                          <div class="dropdown-divider"></div>
+                          <button class="dropdown-item">
+                            Ready to dispatch
+                          </button>
+                          <button class="dropdown-item">
+                            Book Dispatched
+                          </button>
+                          <button class="dropdown-item">
+                            Order Cancelled
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="list-group-item list-group-item-action">
+                      <img class="float-left" src="assets/img/books/3423434.1.jpg" style="width:35px;" />
+                      <div class="float-left pl-3">
+                        <div>Ordered Book Name</div>
+                        <div class="text-muted small">Author Name</div>
+                        <div class="text-primary small">Ordered on 14 Mar '19</div>
+                      </div>
+
+                      <div class="dropdown float-right dropdown-pending-options" data-toggle="tooltip"
+                        title="Change Status">
+                        <button class="btn btn-sm btn-light btn-pending-change-status" data-toggle="dropdown">
+                          <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                        <div class="dropdown-menu shadow border-0 rounded dropdown-menu-right">
+                          <span class="dropdown-item-text text-success">Change Order Status</span>
+                          <div class="dropdown-divider"></div>
+                          <button class="dropdown-item">
+                            Ready to dispatch
+                          </button>
+                          <button class="dropdown-item">
+                            Book Dispatched
+                          </button>
+                          <button class="dropdown-item">
+                            Order Cancelled
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="list-group-item list-group-item-action">
+                      <img class="float-left" src="assets/img/books/978935.1.jpg" style="width:35px;" />
+                      <div class="float-left pl-3">
+                        <div>Ordered Book Name</div>
+                        <div class="text-muted small">Author Name</div>
+                        <div class="text-primary small">Ordered on 14 Mar '19</div>
+                      </div>
+
+                      <div class="dropdown float-right dropdown-pending-options" data-toggle="tooltip"
+                        title="Change Status">
+                        <button class="btn btn-sm btn-light btn-pending-change-status" data-toggle="dropdown">
+                          <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                        <div class="dropdown-menu shadow border-0 rounded dropdown-menu-right">
+                          <span class="dropdown-item-text text-success">Change Order Status</span>
+                          <div class="dropdown-divider"></div>
+                          <button class="dropdown-item">
+                            Ready to dispatch
+                          </button>
+                          <button class="dropdown-item">
+                            Book Dispatched
+                          </button>
+                          <button class="dropdown-item">
+                            Order Cancelled
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-5">
+            <div class="card border-0 shadow-sm mb-4">
+              <div class="card-body">
+                <button class="btn btn-card-right shadow hover-shadow" data-toggle="tooltip"
+                  title="View overall stats"><i class="fas fa-calendar-alt"></i></button>
+                <h4 class="mb-0 rev-chart-title">Top Selling Books</h4>
+                <div class="text-muted mt-1">This Month</div>
+
+                <div class="mt-4" style="height:300px;margin-left:-20px;margin-right:-20px;overflow-y:auto;">
+                  <div class="list-group list-group-mild list-group-flush list-top-orders">
+                    <div class="list-group-item list-group-item-action">
+                      <img class="float-left" src="assets/img/books/9781439.1.jpg" style="width:35px;" />
+                      <div class="float-left pl-3">
+                        <div>Ordered Book Name</div>
+                        <div class="text-muted small">Author Name</div>
+                        <div>Sold: <strong>134</strong></div>
+                      </div>
+
+
+                    </div>
+
+                    <div class="list-group-item list-group-item-action">
+                      <img class="float-left" src="assets/img/books/2312414.1.jpg" style="width:35px;" />
+                      <div class="float-left pl-3">
+                        <div>Ordered Book Name</div>
+                        <div class="text-muted small">Author Name</div>
+                        <div>Sold: <strong>134</strong></div>
+                      </div>
+
+
+                    </div>
+
+                    <div class="list-group-item list-group-item-action">
+                      <img class="float-left" src="assets/img/books/3423434.1.jpg" style="width:35px;" />
+                      <div class="float-left pl-3">
+                        <div>Ordered Book Name</div>
+                        <div class="text-muted small">Author Name</div>
+                        <div>Sold: <strong>134</strong></div>
+                      </div>
+
+
+                    </div>
+
+                    <div class="list-group-item list-group-item-action">
+                      <img class="float-left" src="assets/img/books/978935.1.jpg" style="width:35px;" />
+                      <div class="float-left pl-3">
+                        <div>Ordered Book Name</div>
+                        <div class="text-muted small">Author Name</div>
+                        <div>Sold: <strong>134</strong></div>
+                      </div>
+
+
+                    </div>
+
+                    <div class="list-group-item list-group-item-action">
+                      <img class="float-left" src="assets/img/books/9781439.1.jpg" style="width:35px;" />
+                      <div class="float-left pl-3">
+                        <div>Ordered Book Name</div>
+                        <div class="text-muted small">Author Name</div>
+                        <div>Sold: <strong>134</strong></div>
+                      </div>
+
+
+                    </div>
+
+                    <div class="list-group-item list-group-item-action">
+                      <img class="float-left" src="assets/img/books/2312414.1.jpg" style="width:35px;" />
+                      <div class="float-left pl-3">
+                        <div>Ordered Book Name</div>
+                        <div class="text-muted small">Author Name</div>
+                        <div>Sold: <strong>134</strong></div>
+                      </div>
+
+
+                    </div>
+
+                    <div class="list-group-item list-group-item-action">
+                      <img class="float-left" src="assets/img/books/3423434.1.jpg" style="width:35px;" />
+                      <div class="float-left pl-3">
+                        <div>Ordered Book Name</div>
+                        <div class="text-muted small">Author Name</div>
+                        <div>Sold: <strong>134</strong></div>
+                      </div>
+
+
+                    </div>
+
+                    <div class="list-group-item list-group-item-action">
+                      <img class="float-left" src="assets/img/books/978935.1.jpg" style="width:35px;" />
+                      <div class="float-left pl-3">
+                        <div>Ordered Book Name</div>
+                        <div class="text-muted small">Author Name</div>
+                        <div>Sold: <strong>134</strong></div>
+                      </div>
+
+
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-md-6 col-lg-7">
+            <div class="card border-0 shadow-sm mb-4">
+              <div class="card-body">
+                <button class="btn btn-card-right shadow hover-shadow reverse" data-toggle="tooltip"
+                  title="View overall feedbacks"><i class="fas fa-calendar-alt"></i></button>
+                <h4 class="mb-0 pending-list-title">Customer Feedback</h4>
+                <div class="text-muted mt-1">This Month</div>
+
+                <div class="mt-4" style="height:300px;margin-left:-20px;margin-right:-20px;overflow-y:auto;">
+                  <div class="list-group list-group-mild list-group-flush list-top-orders">
+                    <div class="list-group-item ">
+                      <img class="float-left rounded-circle" src="assets/img/users/Felicity_Smoak.jpg"
+                        style="width:35px;" />
+                      <div class="float-left pl-3" style="width: calc(100% - 35px)">
+                        <div class="font-weight-bold"><strong>User Name</strong>
+                          <span class="float-right text-right text-success">12 Mar '19</span>
+                        </div>
+                        <div class="dropdown">
+                            <div class="text-primary small" data-toggle="dropdown">For &lt;book name here&gt;</div>
+                            <div class="dropdown-menu shadow border-0 rounded" style="min-width:250px;">
+                              <div class="dropdown-item-text clearfix">
+  
+                                <img class="float-left" src="assets/img/books/9781439.1.jpg" style="width:30px;" />
+                                <div class="float-left pl-3">
+                                  <div>Book Name</div>
+                                  <div class="text-muted small">Author Name</div>
+                                  <h5 class="mt-2 text-warning">&#8377;345</h5>
+                                </div>
+  
+                              </div>
+                            </div>
+                          </div>
+                        <div class="">Aliquam erat volutpat. Nullam sed ultrices tellus, at faucibus arcu.
+                          Etiam nec lobortis
+                          risus. Phasellus nec pretium velit.</div>
+                      </div>
+
+
+                    </div>
+
+                    <div class="list-group-item ">
+                      <img class="float-left rounded-circle" src="assets/img/users/Felicity_Smoak.jpg"
+                        style="width:35px;" />
+                      <div class="float-left pl-3" style="width: calc(100% - 35px)">
+                        <div class="font-weight-bold"><strong>User Name</strong>
+                          <span class="float-right text-right text-success">12 Mar '19</span>
+                        </div>
+                        <div class="dropdown">
+                            <div class="text-primary small" data-toggle="dropdown">For &lt;book name here&gt;</div>
+                            <div class="dropdown-menu shadow border-0 rounded" style="min-width:250px;">
+                              <div class="dropdown-item-text clearfix">
+  
+                                <img class="float-left" src="assets/img/books/9781439.1.jpg" style="width:30px;" />
+                                <div class="float-left pl-3">
+                                  <div>Book Name</div>
+                                  <div class="text-muted small">Author Name</div>
+                                  <h5 class="mt-2 text-warning">&#8377;345</h5>
+                                </div>
+  
+                              </div>
+                            </div>
+                          </div>
+                        <div class="">Aliquam erat volutpat. Nullam sed ultrices tellus, at faucibus arcu.
+                          Etiam nec lobortis
+                          risus. Phasellus nec pretium velit.</div>
+                      </div>
+
+
+                    </div>
+                    <div class="list-group-item ">
+                      <img class="float-left rounded-circle" src="assets/img/users/Joe_West.jpg" style="width:35px;" />
+                      <div class="float-left pl-3" style="width: calc(100% - 35px)">
+                        <div class="font-weight-bold"><strong>User Name</strong>
+                          <span class="float-right text-right text-success">12 Mar '19</span>
+                        </div>
+                        <div class="dropdown">
+                            <div class="text-primary small" data-toggle="dropdown">For &lt;book name here&gt;</div>
+                            <div class="dropdown-menu shadow border-0 rounded" style="min-width:250px;">
+                              <div class="dropdown-item-text clearfix">
+  
+                                <img class="float-left" src="assets/img/books/9781439.1.jpg" style="width:30px;" />
+                                <div class="float-left pl-3">
+                                  <div>Book Name</div>
+                                  <div class="text-muted small">Author Name</div>
+                                  <h5 class="mt-2 text-warning">&#8377;345</h5>
+                                </div>
+  
+                              </div>
+                            </div>
+                          </div>
+                        <div class="">Aliquam erat volutpat. Nullam sed ultrices tellus, at faucibus arcu.
+                          Etiam nec lobortis
+                          risus. Phasellus nec pretium velit.</div>
+                      </div>
+
+
+                    </div>
+                    <div class="list-group-item ">
+                      <img class="float-left rounded-circle" src="assets/img/users/Oliver_Queen.jpg"
+                        style="width:35px;" />
+                      <div class="float-left pl-3" style="width: calc(100% - 35px)">
+                        <div class="font-weight-bold"><strong>User Name</strong>
+                          <span class="float-right text-right text-success">12 Mar '19</span>
+                        </div>
+                        <div class="dropdown">
+                            <div class="text-primary small" data-toggle="dropdown">For &lt;book name here&gt;</div>
+                            <div class="dropdown-menu shadow border-0 rounded" style="min-width:250px;">
+                              <div class="dropdown-item-text clearfix">
+  
+                                <img class="float-left" src="assets/img/books/9781439.1.jpg" style="width:30px;" />
+                                <div class="float-left pl-3">
+                                  <div>Book Name</div>
+                                  <div class="text-muted small">Author Name</div>
+                                  <h5 class="mt-2 text-warning">&#8377;345</h5>
+                                </div>
+  
+                              </div>
+                            </div>
+                          </div>
+                        <div class="">Aliquam erat volutpat. Nullam sed ultrices tellus, at faucibus arcu.
+                          Etiam nec lobortis
+                          risus. Phasellus nec pretium velit.</div>
+                      </div>
+
+
+                    </div>
+                    <div class="list-group-item ">
+                      <img class="float-left rounded-circle" src="assets/img/users/Felicity_Smoak.jpg"
+                        style="width:35px;" />
+                      <div class="float-left pl-3" style="width: calc(100% - 35px)">
+                        <div class="font-weight-bold"><strong>User Name</strong>
+                          <span class="float-right text-right text-success">12 Mar '19</span>
+                        </div>
+                        <div class="dropdown">
+                          <div class="text-primary small" data-toggle="dropdown">For &lt;book name here&gt;</div>
+                          <div class="dropdown-menu shadow border-0 rounded" style="min-width:250px;">
+                            <div class="dropdown-item-text clearfix">
+
+                              <img class="float-left" src="assets/img/books/9781439.1.jpg" style="width:30px;" />
+                              <div class="float-left pl-3">
+                                <div>Book Name</div>
+                                <div class="text-muted small">Author Name</div>
+                                <h5 class="mt-2 text-warning">&#8377;345</h5>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="">Aliquam erat volutpat. Nullam sed ultrices tellus, at faucibus arcu.
+                          Etiam nec lobortis
+                          risus. Phasellus nec pretium velit.</div>
+                      </div>
+
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>

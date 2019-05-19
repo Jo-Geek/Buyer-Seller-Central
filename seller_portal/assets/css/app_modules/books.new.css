@@ -22,6 +22,16 @@
     width: 100%;
 }
 
+.books-suggestion {
+    min-width: 300px;
+}
+
 .books-suggestion .dropdown-item {
     cursor: pointer;
+}
+
+@media (min-width:768px) {
+    .books-suggestion {
+        min-width: 400px;
+    }
 }

@@ -1,0 +1,69 @@
+.list-books {
+    background-color: white;
+}
+
+.list-books .book-category {
+    display: none !important;
+}
+
+.list-books .book-last-order {
+    display: none !important;
+}
+
+.list-books .book-stock {
+    margin-top: 1rem;
+    display: inline-block !important;
+    border: 1px solid #ff7518;
+    background-color: #ffefe4;
+    flex: 0 0 33.33% !important;
+    text-align: center;
+    padding: .25rem;
+    margin-left: 15px;
+}
+
+.list-books .book-delete-div {
+    position: absolute;
+    right: 0;
+    bottom: 0
+}
+
+.book-category-filter {
+    margin-top: .5rem;
+}
+
+.book-search {
+    width: 100%;
+}
+
+@media (min-width:576px) {
+    .list-books {
+        background-color: transparent;
+    }
+    .list-books .book-category {
+        display: flex !important;
+    }
+    .list-books .book-last-order {
+        display: flex !important;
+    }
+    .list-books .book-stock {
+        margin-top: 0rem;
+        display: flex !important;
+        border: none;
+        background-color: transparent;
+        flex: 0 0 16.6666666667% !important;
+        text-align: left;
+        padding: 0px;
+        margin-left: 0px;
+    }
+    .list-books .book-delete-div {
+        position: static;
+        right: 0;
+        bottom: 0
+    }
+    .book-category-filter {
+        margin-top: 0rem;
+    }
+    .book-search {
+        width: 300px;
+    }
+}

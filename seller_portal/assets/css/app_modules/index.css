@@ -1,0 +1,50 @@
+.row-metrics .card>.card-body:nth-child(1) {
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-card-right {
+    background: linear-gradient(130deg, #16BFAE 50%, #3E7FE2 100%);
+    color: white;
+    position: absolute;
+    right: 1rem;
+    border: none;
+}
+
+.btn-card-right:hover {
+    color: white;
+}
+
+.rev-chart-title {
+    background: linear-gradient(130deg, #2680EB 0%, #eb2626 100%);
+    font-weight: normal;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pending-list-title {
+    background: linear-gradient(130deg, #bc1e1e 0%, #ee5cc1 100%);
+    font-weight: normal;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-card-right.reverse {
+    background: linear-gradient(130deg, #1e66bc 50%, #16bfae 100%);
+}
+
+.list-pending-orders .list-group-item {
+    position: relative;
+}
+
+.list-pending-orders .list-group-item .dropdown-menu {
+    font-size: .9em;
+}
+
+.btn-pending-change-status {
+    position: absolute;
+    right: 0;
+    top: 0;
+   
+}

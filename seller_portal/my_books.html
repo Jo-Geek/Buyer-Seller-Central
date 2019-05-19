@@ -52,6 +52,9 @@
   <!-- Strawberry JS - JONES -->
   <script src="assets/js/strawberry.core.js"></script>
   <script src="assets/js/strawberry.js"></script>
+
+  <!-- CSS for this view -->
+  <link rel="stylesheet" href="assets/css/app_modules/books.css" />
 </head>
 
 <body>
@@ -138,7 +141,7 @@
         </div>
 
       </div>
-      <div class="workspace p-4" id="workspace">
+      <div class="workspace px-2 py-4 px-md-4" id="workspace">
 
         <!-- Breadcrumbs -->
         <div class="breadcrumb-wrapper" aria-label="Breadcrumb">
@@ -153,10 +156,10 @@
         <div class="">
           <div class="text-left clearfix mb-2">
 
-            <input class="form-control d-inline-block form-control-sm float-left" placeholder="Search your books"
-              style="width:300px" />
+            <input class="form-control d-inline-block form-control-sm float-left book-search"
+              placeholder="Search your books" />
 
-            <div class="dropdown d-inline-block ml-2">
+            <div class="dropdown d-inline-block ml-0 ml-md-2 book-category-filter">
               <button class="btn btn-sm btn-light bg-white text-muted shadow-sm rounded" data-toggle="dropdown">Filter
                 by
                 Category
@@ -278,34 +281,34 @@
               </div>
             </div>
           </div>
-          <div class="list-group list-group-flush list-group-light">
+          <div class="list-group list-group-flush list-group-light list-books">
             <div class="list-group-item hover-shadow hover-white py-2 hover-visible-container"
               style="border-top-color:var(--gray)">
               <div class="row">
-                <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <img src="assets/img/books/2312414.1.jpg" style="height:50px;" />
+                <div class="col-md-1 d-md-flex justify-content-center align-items-center d-block book-img col-3">
+                  <img src="assets/img/books/2312414.1.jpg" style="height:50px;">
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-md-4 book-info col-9">
                   <div>Basic Electronic and Electricals</div>
                   <div class="text-muted small">New ACE Publications</div>
                   <em class="text-primary">Uploaded on 03 Mar, 19</em>
                 </div>
-                <div class="col-12 col-md-2 d-flex align-items-center">
+                <div class="col-12 col-md-2 d-flex align-items-center book-category">
                   <span class="align-middle">
                     Engineering
                   </span>
                 </div>
-                <div class="col-12 col-md-2 d-flex align-items-center">
+                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
                   <span class="align-middle">
                     03, March '19
                   </span>
                 </div>
-                <div class="col-12 col-md-2  d-md-flex align-items-center justify-content-center d-block">
+                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block book-stock">
                   <strong class="d-inline d-md-none">Stock:</strong>2
                 </div>
 
                 <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <div class="hover-visible-target">
+                  <div class="hover-visible-target book-delete-div">
                     <a class="btn btn-light border-0 mr-1" href="#" data-toggle="tooltip" title="Remove Book">
                       <i class="fas fa-trash text-danger"></i>
                     </a>
@@ -316,30 +319,30 @@
 
             <div class="list-group-item hover-shadow hover-white py-2 hover-visible-container">
               <div class="row">
-                <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <img src="assets/img/books/978935.1.jpg" style="height:50px;" />
+                <div class="col-md-1 d-md-flex justify-content-center align-items-center d-block book-img col-3">
+                  <img src="assets/img/books/978935.1.jpg" style="height:50px;">
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-md-4 book-info col-9">
                   <div>Elements of Mechanical Engineering</div>
                   <div class="text-muted small">Dr. D S Kumar</div>
                   <em class="text-primary">Uploaded on 23 Mar, 19</em>
                 </div>
-                <div class="col-12 col-md-2 d-flex align-items-center">
+                <div class="col-12 col-md-2 d-flex align-items-center book-category">
                   <span class="align-middle">
                     Engineering
                   </span>
                 </div>
-                <div class="col-12 col-md-2 d-flex align-items-center">
+                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
                   <span class="align-middle">
                     03, March '19
                   </span>
                 </div>
-                <div class="col-12 col-md-2  d-md-flex align-items-center justify-content-center d-block">
+                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block book-stock">
                   <strong class="d-inline d-md-none">Stock:</strong>2
                 </div>
 
                 <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <div class="hover-visible-target">
+                  <div class="hover-visible-target book-delete-div">
                     <a class="btn btn-light border-0 mr-1" href="#" data-toggle="tooltip" title="Remove Book">
                       <i class="fas fa-trash text-danger"></i>
                     </a>
@@ -351,30 +354,30 @@
 
             <div class="list-group-item hover-shadow hover-white py-2 hover-visible-container">
               <div class="row">
-                <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <img src="assets/img/books/9781439.1.jpg" style="height:50px;" />
+                <div class="col-md-1 d-md-flex justify-content-center align-items-center d-block book-img col-3">
+                  <img src="assets/img/books/9781439.1.jpg" style="height:50px;">
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-md-4 book-info col-9">
                   <div>Statistical Methods of Finance</div>
                   <div class="text-muted small">Bruno Remillard</div>
                   <em class="text-primary">Uploaded on 23 Mar, 19</em>
                 </div>
-                <div class="col-12 col-md-2 d-flex align-items-center">
+                <div class="col-12 col-md-2 d-flex align-items-center book-category">
                   <span class="align-middle">
                     Finance
                   </span>
                 </div>
-                <div class="col-12 col-md-2 d-flex align-items-center">
+                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
                   <span class="align-middle">
                     03, March '19
                   </span>
                 </div>
-                <div class="col-12 col-md-2  d-md-flex align-items-center justify-content-center d-block">
+                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block book-stock">
                   <strong class="d-inline d-md-none">Stock:</strong>2
                 </div>
 
                 <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <div class="hover-visible-target">
+                  <div class="hover-visible-target book-delete-div">
                     <a class="btn btn-light border-0 mr-1" href="#" data-toggle="tooltip" title="Remove Book">
                       <i class="fas fa-trash text-danger"></i>
                     </a>
@@ -385,30 +388,30 @@
 
             <div class="list-group-item hover-shadow hover-white py-2 hover-visible-container">
               <div class="row">
-                <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <img src="assets/img/books/3423434.1.jpg" style="height:50px;" />
+                <div class="col-md-1 d-md-flex justify-content-center align-items-center d-block book-img col-3">
+                  <img src="assets/img/books/3423434.1.jpg" style="height:50px;">
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-md-4 book-info col-9">
                   <div>Revolution 2020</div>
                   <div class="text-muted small">Chetan Bhagat</div>
                   <em class="text-primary">Uploaded on 23 Mar, 19</em>
                 </div>
-                <div class="col-12 col-md-2 d-flex align-items-center">
+                <div class="col-12 col-md-2 d-flex align-items-center book-category">
                   <span class="align-middle">
                     Novel
                   </span>
                 </div>
-                <div class="col-12 col-md-2 d-flex align-items-center">
+                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
                   <span class="align-middle">
                     03, March '19
                   </span>
                 </div>
-                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block">
+                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block book-stock">
                   <strong class="d-inline d-md-none">Stock:</strong>2
                 </div>
 
                 <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <div class="hover-visible-target">
+                  <div class="hover-visible-target book-delete-div">
                     <a class="btn btn-light border-0 mr-1" href="#" data-toggle="tooltip" title="Remove Book">
                       <i class="fas fa-trash text-danger"></i>
                     </a>
@@ -420,30 +423,30 @@
 
             <div class="list-group-item hover-shadow hover-white py-2 hover-visible-container">
               <div class="row">
-                <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <img src="assets/img/books/2312414.1.jpg" style="height:50px;" />
+                <div class="col-md-1 d-md-flex justify-content-center align-items-center d-block book-img col-3">
+                  <img src="assets/img/books/2312414.1.jpg" style="height:50px;">
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-md-4 book-info col-9">
                   <div>Basic Electronic and Electricals</div>
                   <div class="text-muted small">New ACE Publications</div>
                   <em class="text-primary">Uploaded on 03 Mar, 19</em>
                 </div>
-                <div class="col-12 col-md-2 d-flex align-items-center">
+                <div class="col-12 col-md-2 d-flex align-items-center book-category">
                   <span class="align-middle">
                     Engineering
                   </span>
                 </div>
-                <div class="col-12 col-md-2 d-flex align-items-center">
+                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
                   <span class="align-middle">
                     03, March '19
                   </span>
                 </div>
-                <div class="col-12 col-md-2  d-md-flex align-items-center justify-content-center d-block">
+                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block book-stock">
                   <strong class="d-inline d-md-none">Stock:</strong>2
                 </div>
 
                 <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <div class="hover-visible-target">
+                  <div class="hover-visible-target book-delete-div">
                     <a class="btn btn-light border-0 mr-1" href="#" data-toggle="tooltip" title="Remove Book">
                       <i class="fas fa-trash text-danger"></i>
                     </a>
@@ -454,30 +457,30 @@
 
             <div class="list-group-item hover-shadow hover-white py-2 hover-visible-container">
               <div class="row">
-                <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <img src="assets/img/books/978935.1.jpg" style="height:50px;" />
+                <div class="col-md-1 d-md-flex justify-content-center align-items-center d-block book-img col-3">
+                  <img src="assets/img/books/978935.1.jpg" style="height:50px;">
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-md-4 book-info col-9">
                   <div>Elements of Mechanical Engineering</div>
                   <div class="text-muted small">Dr. D S Kumar</div>
                   <em class="text-primary">Uploaded on 23 Mar, 19</em>
                 </div>
-                <div class="col-12 col-md-2 d-flex align-items-center">
+                <div class="col-12 col-md-2 d-flex align-items-center book-category">
                   <span class="align-middle">
                     Engineering
                   </span>
                 </div>
-                <div class="col-12 col-md-2 d-flex align-items-center">
+                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
                   <span class="align-middle">
                     03, March '19
                   </span>
                 </div>
-                <div class="col-12 col-md-2  d-md-flex align-items-center justify-content-center d-block">
+                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block book-stock">
                   <strong class="d-inline d-md-none">Stock:</strong>2
                 </div>
 
                 <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <div class="hover-visible-target">
+                  <div class="hover-visible-target book-delete-div">
                     <a class="btn btn-light border-0 mr-1" href="#" data-toggle="tooltip" title="Remove Book">
                       <i class="fas fa-trash text-danger"></i>
                     </a>
@@ -488,30 +491,30 @@
 
             <div class="list-group-item hover-shadow hover-white py-2 hover-visible-container">
               <div class="row">
-                <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <img src="assets/img/books/9781439.1.jpg" style="height:50px;" />
+                <div class="col-md-1 d-md-flex justify-content-center align-items-center d-block book-img col-3">
+                  <img src="assets/img/books/9781439.1.jpg" style="height:50px;">
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-md-4 book-info col-9">
                   <div>Statistical Methods of Finance</div>
                   <div class="text-muted small">Bruno Remillard</div>
                   <em class="text-primary">Uploaded on 23 Mar, 19</em>
                 </div>
-                <div class="col-12 col-md-2 d-flex align-items-center">
+                <div class="col-12 col-md-2 d-flex align-items-center book-category">
                   <span class="align-middle">
                     Finance
                   </span>
                 </div>
-                <div class="col-12 col-md-2 d-flex align-items-center">
+                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
                   <span class="align-middle">
                     03, March '19
                   </span>
                 </div>
-                <div class="col-12 col-md-2  d-md-flex align-items-center justify-content-center d-block">
+                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block book-stock">
                   <strong class="d-inline d-md-none">Stock:</strong>2
                 </div>
 
                 <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <div class="hover-visible-target">
+                  <div class="hover-visible-target book-delete-div">
                     <a class="btn btn-light border-0 mr-1" href="#" data-toggle="tooltip" title="Remove Book">
                       <i class="fas fa-trash text-danger"></i>
                     </a>
@@ -522,30 +525,30 @@
 
             <div class="list-group-item hover-shadow hover-white py-2 hover-visible-container">
               <div class="row">
-                <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <img src="assets/img/books/3423434.1.jpg" style="height:50px;" />
+                <div class="col-md-1 d-md-flex justify-content-center align-items-center d-block book-img col-3">
+                  <img src="assets/img/books/3423434.1.jpg" style="height:50px;">
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-md-4 book-info col-9">
                   <div>Revolution 2020</div>
                   <div class="text-muted small">Chetan Bhagat</div>
                   <em class="text-primary">Uploaded on 23 Mar, 19</em>
                 </div>
-                <div class="col-12 col-md-2 d-flex align-items-center">
+                <div class="col-12 col-md-2 d-flex align-items-center book-category">
                   <span class="align-middle">
                     Novel
                   </span>
                 </div>
-                <div class="col-12 col-md-2 d-flex align-items-center">
+                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
                   <span class="align-middle">
                     03, March '19
                   </span>
                 </div>
-                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block">
+                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block book-stock">
                   <strong class="d-inline d-md-none">Stock:</strong>2
                 </div>
 
                 <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <div class="hover-visible-target">
+                  <div class="hover-visible-target book-delete-div">
                     <a class="btn btn-light border-0 mr-1" href="#" data-toggle="tooltip" title="Remove Book">
                       <i class="fas fa-trash text-danger"></i>
                     </a>
@@ -557,30 +560,30 @@
 
             <div class="list-group-item hover-shadow hover-white py-2 hover-visible-container">
               <div class="row">
-                <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <img src="assets/img/books/9781439.1.jpg" style="height:50px;" />
+                <div class="col-md-1 d-md-flex justify-content-center align-items-center d-block book-img col-3">
+                  <img src="assets/img/books/9781439.1.jpg" style="height:50px;">
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-md-4 book-info col-9">
                   <div>Statistical Methods of Finance</div>
                   <div class="text-muted small">Bruno Remillard</div>
                   <em class="text-primary">Uploaded on 23 Mar, 19</em>
                 </div>
-                <div class="col-12 col-md-2 d-flex align-items-center">
+                <div class="col-12 col-md-2 d-flex align-items-center book-category">
                   <span class="align-middle">
                     Finance
                   </span>
                 </div>
-                <div class="col-12 col-md-2 d-flex align-items-center">
+                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
                   <span class="align-middle">
                     03, March '19
                   </span>
                 </div>
-                <div class="col-12 col-md-2  d-md-flex align-items-center justify-content-center d-block">
+                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block book-stock">
                   <strong class="d-inline d-md-none">Stock:</strong>2
                 </div>
 
                 <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <div class="hover-visible-target">
+                  <div class="hover-visible-target book-delete-div">
                     <a class="btn btn-light border-0 mr-1" href="#" data-toggle="tooltip" title="Remove Book">
                       <i class="fas fa-trash text-danger"></i>
                     </a>
@@ -591,30 +594,30 @@
 
             <div class="list-group-item hover-shadow hover-white py-2 hover-visible-container">
               <div class="row">
-                <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <img src="assets/img/books/3423434.1.jpg" style="height:50px;" />
+                <div class="col-md-1 d-md-flex justify-content-center align-items-center d-block book-img col-3">
+                  <img src="assets/img/books/3423434.1.jpg" style="height:50px;">
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-md-4 book-info col-9">
                   <div>Revolution 2020</div>
                   <div class="text-muted small">Chetan Bhagat</div>
                   <em class="text-primary">Uploaded on 23 Mar, 19</em>
                 </div>
-                <div class="col-12 col-md-2 d-flex align-items-center">
+                <div class="col-12 col-md-2 d-flex align-items-center book-category">
                   <span class="align-middle">
                     Novel
                   </span>
                 </div>
-                <div class="col-12 col-md-2 d-flex align-items-center">
+                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
                   <span class="align-middle">
                     03, March '19
                   </span>
                 </div>
-                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block">
+                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block book-stock">
                   <strong class="d-inline d-md-none">Stock:</strong>2
                 </div>
 
                 <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <div class="hover-visible-target">
+                  <div class="hover-visible-target book-delete-div">
                     <a class="btn btn-light border-0 mr-1" href="#" data-toggle="tooltip" title="Remove Book">
                       <i class="fas fa-trash text-danger"></i>
                     </a>
@@ -625,30 +628,30 @@
 
             <div class="list-group-item hover-shadow hover-white py-2 hover-visible-container">
               <div class="row">
-                <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <img src="assets/img/books/9781439.1.jpg" style="height:50px;" />
+                <div class="col-md-1 d-md-flex justify-content-center align-items-center d-block book-img col-3">
+                  <img src="assets/img/books/9781439.1.jpg" style="height:50px;">
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-md-4 book-info col-9">
                   <div>Statistical Methods of Finance</div>
                   <div class="text-muted small">Bruno Remillard</div>
                   <em class="text-primary">Uploaded on 23 Mar, 19</em>
                 </div>
-                <div class="col-12 col-md-2 d-flex align-items-center">
+                <div class="col-12 col-md-2 d-flex align-items-center book-category">
                   <span class="align-middle">
                     Finance
                   </span>
                 </div>
-                <div class="col-12 col-md-2 d-flex align-items-center">
+                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
                   <span class="align-middle">
                     03, March '19
                   </span>
                 </div>
-                <div class="col-12 col-md-2  d-md-flex align-items-center justify-content-center d-block">
+                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block book-stock">
                   <strong class="d-inline d-md-none">Stock:</strong>2
                 </div>
 
                 <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <div class="hover-visible-target">
+                  <div class="hover-visible-target book-delete-div">
                     <a class="btn btn-light border-0 mr-1" href="#" data-toggle="tooltip" title="Remove Book">
                       <i class="fas fa-trash text-danger"></i>
                     </a>
@@ -659,30 +662,30 @@
 
             <div class="list-group-item hover-shadow hover-white py-2 hover-visible-container">
               <div class="row">
-                <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <img src="assets/img/books/3423434.1.jpg" style="height:50px;" />
+                <div class="col-md-1 d-md-flex justify-content-center align-items-center d-block book-img col-3">
+                  <img src="assets/img/books/3423434.1.jpg" style="height:50px;">
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-md-4 book-info col-9">
                   <div>Revolution 2020</div>
                   <div class="text-muted small">Chetan Bhagat</div>
                   <em class="text-primary">Uploaded on 23 Mar, 19</em>
                 </div>
-                <div class="col-12 col-md-2 d-flex align-items-center">
+                <div class="col-12 col-md-2 d-flex align-items-center book-category">
                   <span class="align-middle">
                     Novel
                   </span>
                 </div>
-                <div class="col-12 col-md-2 d-flex align-items-center">
+                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
                   <span class="align-middle">
                     03, March '19
                   </span>
                 </div>
-                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block">
+                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block book-stock">
                   <strong class="d-inline d-md-none">Stock:</strong>2
                 </div>
 
                 <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <div class="hover-visible-target">
+                  <div class="hover-visible-target book-delete-div">
                     <a class="btn btn-light border-0 mr-1" href="#" data-toggle="tooltip" title="Remove Book">
                       <i class="fas fa-trash text-danger"></i>
                     </a>
@@ -692,6 +695,31 @@
             </div>
 
           </div>
+
+          <div class="mt-4 clearfix">
+            <span class="float-left">
+              Showing 1 - 20 of 300 books
+            </span>
+            <nav class="float-right">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                      <i class="fas fa-chevron-left"></i>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <i class="fas fa-chevron-right"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+
         </div>
 
 
