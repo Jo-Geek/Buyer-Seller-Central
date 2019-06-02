@@ -88,7 +88,7 @@
 
 
         <li class="">
-          <a href="book_requests.html">
+          <a href="#" class="active">
             <i class="fas fa-book fa-fw mr-1"></i> Book Requests
           </a>
         </li>
@@ -106,7 +106,7 @@
         </li>
 
         <li class="">
-          <a href="#" class="active">
+          <a href="my_books.html">
             <i class="fas fa-boxes fa-fw mr-1"></i> My Books
           </a>
         </li>
@@ -210,57 +210,35 @@
                   </div>
 
                 </div>
+
                 <div class="col-12 col-md-2 px-0">
-                  <div class="dropdown">
-                    <div class="btn btn-light btn-block text-left px-3 text-muted rounded" data-toggle="dropdown"
-                      aria-expanded="false">
-                      Category
-                      <small><i class="fas fa-chevron-down ml-2"></i></small>
-                    </div>
-                    <div class="dropdown-menu shadow rounded border-light" x-placement="bottom-start"
-                      style="position: absolute; transform: translate3d(0px, 29px, 0px); top: 0px; left: 0px; will-change: transform;">
-                      <a class="dropdown-item" href="#">
-                        <i class="fas fa-sort-alpha-down text-muted mr-1"></i>
-                        Sort A - Z
-                      </a>
-                      <a class="dropdown-item" href="#">
-                        <i class="fas fa-sort-alpha-up text-muted mr-1"></i>
-                        Sort Z - A
-                      </a>
-
-
-                    </div>
-                  </div>
-
-                </div>
-                <div class="col-12 col-md-2 px-0">
-                  <div class="dropdown">
-                    <div class="btn btn-light btn-block text-left px-3 text-muted rounded" data-toggle="dropdown"
-                      aria-expanded="false">
-                      Last Order on
-                      <small><i class="fas fa-chevron-down ml-2"></i></small>
-                    </div>
-                    <div class="dropdown-menu shadow rounded border-light" x-placement="bottom-start"
-                      style="position: absolute; transform: translate3d(0px, 29px, 0px); top: 0px; left: 0px; will-change: transform;">
-                      <a class="dropdown-item" href="#">
-                        <i class="fas fa-sort-numeric-up text-muted mr-1"></i>
-                        Sort Newest to Oldest
-                      </a>
-                      <a class="dropdown-item" href="#">
-                        <i class="fas fa-sort-numeric-down text-muted mr-1"></i>
-                        Sort Oldest to Newest
-                      </a>
-
-
-                    </div>
-                  </div>
-
-                </div>
-                <div class="col-12 col-md-2">
                   <div class="dropdown">
                     <div class="btn btn-light btn-block text-left px-3 text-muted rounded" data-toggle="dropdown"
                       aria-expanded="false">
                       Stock
+                      <small><i class="fas fa-chevron-down ml-2"></i></small>
+                    </div>
+                    <div class="dropdown-menu shadow rounded border-light" x-placement="bottom-start"
+                      style="position: absolute; transform: translate3d(0px, 29px, 0px); top: 0px; left: 0px; will-change: transform;">
+                      <a class="dropdown-item" href="#">
+                        <i class="fas fa-sort-numeric-down text-muted mr-1"></i>
+                        Sort 1 - 9
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="fas fa-sort-numeric-up text-muted mr-1"></i>
+                        Sort 9 - 1
+                      </a>
+
+
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-12 col-md-2 px-0">
+                  <div class="dropdown">
+                    <div class="btn btn-light btn-block text-left px-3 text-muted rounded" data-toggle="dropdown"
+                      aria-expanded="false">
+                      Order Quantity
                       <small><i class="fas fa-chevron-down ml-2"></i></small>
                     </div>
                     <div class="dropdown-menu shadow rounded border-light" x-placement="bottom-start"
@@ -291,26 +269,25 @@
                 <div class="col-md-4 book-info col-9">
                   <div>Basic Electronic and Electricals</div>
                   <div class="text-muted small">New ACE Publications</div>
-                  <em class="text-primary">Uploaded on 03 Mar, 19</em>
-                </div>
-                <div class="col-12 col-md-2 d-flex align-items-center book-category">
-                  <span class="align-middle">
-                    Engineering
-                  </span>
-                </div>
-                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
-                  <span class="align-middle">
-                    03, March '19
-                  </span>
-                </div>
-                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block book-stock">
-                  <strong class="d-inline d-md-none">Stock:</strong>2
+                  <em class="text-primary">Order Date: 03 Mar '19</em>
                 </div>
 
-                <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <div class="hover-visible-target book-delete-div">
-                    <a class="btn btn-light border-0 mr-1" href="#" data-toggle="tooltip" title="Remove Book">
-                      <i class="fas fa-trash text-danger"></i>
+                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
+                  <span class="align-middle">
+                    4
+                  </span>
+                </div>
+                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-start px-4 d-block book-stock">
+                  <strong class="d-inline d-md-none">Quantity:</strong>2
+                </div>
+
+                <div class="col-12 col-md-3 d-md-flex justify-content-center align-items-center d-block">
+                  <div class="book-delete-div">
+                    <a class="btn btn-light border-0 mr-1 btn-sm" href="#" data-toggle="tooltip" title="Accept Order">
+                      <i class="fas fa-check text-success mr-1"></i> Accept
+                    </a>
+                    <a class="btn btn-light border-0 mr-1 btn-sm" href="#" data-toggle="tooltip" title="Decline Order">
+                      <i class="fas fa-times text-danger mr-1"></i> Reject
                     </a>
                   </div>
                 </div>
@@ -325,26 +302,26 @@
                 <div class="col-md-4 book-info col-9">
                   <div>Elements of Mechanical Engineering</div>
                   <div class="text-muted small">Dr. D S Kumar</div>
-                  <em class="text-primary">Uploaded on 23 Mar, 19</em>
-                </div>
-                <div class="col-12 col-md-2 d-flex align-items-center book-category">
-                  <span class="align-middle">
-                    Engineering
-                  </span>
-                </div>
-                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
-                  <span class="align-middle">
-                    03, March '19
-                  </span>
-                </div>
-                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block book-stock">
-                  <strong class="d-inline d-md-none">Stock:</strong>2
+                  <em class="text-primary">Order Date: 03 Mar '19</em>
                 </div>
 
-                <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <div class="hover-visible-target book-delete-div">
-                    <a class="btn btn-light border-0 mr-1" href="#" data-toggle="tooltip" title="Remove Book">
-                      <i class="fas fa-trash text-danger"></i>
+                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
+                  <span class="align-middle">
+                    3
+                  </span>
+                </div>
+                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-start px-4 d-block book-stock">
+                  <strong class="d-inline d-md-none">Quantity:</strong>2
+                </div>
+
+
+                <div class="col-12 col-md-3 d-md-flex justify-content-center align-items-center d-block">
+                  <div class="book-delete-div">
+                    <a class="btn btn-light border-0 mr-1 btn-sm" href="#" data-toggle="tooltip" title="Accept Order">
+                      <i class="fas fa-check text-success mr-1"></i> Accept
+                    </a>
+                    <a class="btn btn-light border-0 mr-1 btn-sm" href="#" data-toggle="tooltip" title="Decline Order">
+                      <i class="fas fa-times text-danger mr-1"></i> Reject
                     </a>
                   </div>
                 </div>
@@ -360,26 +337,26 @@
                 <div class="col-md-4 book-info col-9">
                   <div>Statistical Methods of Finance</div>
                   <div class="text-muted small">Bruno Remillard</div>
-                  <em class="text-primary">Uploaded on 23 Mar, 19</em>
-                </div>
-                <div class="col-12 col-md-2 d-flex align-items-center book-category">
-                  <span class="align-middle">
-                    Finance
-                  </span>
-                </div>
-                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
-                  <span class="align-middle">
-                    03, March '19
-                  </span>
-                </div>
-                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block book-stock">
-                  <strong class="d-inline d-md-none">Stock:</strong>2
+                  <em class="text-primary">Order Date: 03 Mar '19</em>
                 </div>
 
-                <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <div class="hover-visible-target book-delete-div">
-                    <a class="btn btn-light border-0 mr-1" href="#" data-toggle="tooltip" title="Remove Book">
-                      <i class="fas fa-trash text-danger"></i>
+                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
+                  <span class="align-middle">
+                    3
+                  </span>
+                </div>
+                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-start px-4 d-block book-stock">
+                  <strong class="d-inline d-md-none">Quantity:</strong>2
+                </div>
+
+
+                <div class="col-12 col-md-3 d-md-flex justify-content-center align-items-center d-block">
+                  <div class="book-delete-div">
+                    <a class="btn btn-light border-0 mr-1 btn-sm" href="#" data-toggle="tooltip" title="Accept Order">
+                      <i class="fas fa-check text-success mr-1"></i> Accept
+                    </a>
+                    <a class="btn btn-light border-0 mr-1 btn-sm" href="#" data-toggle="tooltip" title="Decline Order">
+                      <i class="fas fa-times text-danger mr-1"></i> Reject
                     </a>
                   </div>
                 </div>
@@ -394,26 +371,26 @@
                 <div class="col-md-4 book-info col-9">
                   <div>Revolution 2020</div>
                   <div class="text-muted small">Chetan Bhagat</div>
-                  <em class="text-primary">Uploaded on 23 Mar, 19</em>
-                </div>
-                <div class="col-12 col-md-2 d-flex align-items-center book-category">
-                  <span class="align-middle">
-                    Novel
-                  </span>
-                </div>
-                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
-                  <span class="align-middle">
-                    03, March '19
-                  </span>
-                </div>
-                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block book-stock">
-                  <strong class="d-inline d-md-none">Stock:</strong>2
+                  <em class="text-primary">Order Date: 03 Mar '19</em>
                 </div>
 
-                <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <div class="hover-visible-target book-delete-div">
-                    <a class="btn btn-light border-0 mr-1" href="#" data-toggle="tooltip" title="Remove Book">
-                      <i class="fas fa-trash text-danger"></i>
+                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
+                  <span class="align-middle">
+                    3
+                  </span>
+                </div>
+                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-start px-4 d-block book-stock">
+                  <strong class="d-inline d-md-none">Quantity:</strong>2
+                </div>
+
+
+                <div class="col-12 col-md-3 d-md-flex justify-content-center align-items-center d-block">
+                  <div class="book-delete-div">
+                    <a class="btn btn-light border-0 mr-1 btn-sm" href="#" data-toggle="tooltip" title="Accept Order">
+                      <i class="fas fa-check text-success mr-1"></i> Accept
+                    </a>
+                    <a class="btn btn-light border-0 mr-1 btn-sm" href="#" data-toggle="tooltip" title="Decline Order">
+                      <i class="fas fa-times text-danger mr-1"></i> Reject
                     </a>
                   </div>
                 </div>
@@ -429,26 +406,26 @@
                 <div class="col-md-4 book-info col-9">
                   <div>Basic Electronic and Electricals</div>
                   <div class="text-muted small">New ACE Publications</div>
-                  <em class="text-primary">Uploaded on 03 Mar, 19</em>
-                </div>
-                <div class="col-12 col-md-2 d-flex align-items-center book-category">
-                  <span class="align-middle">
-                    Engineering
-                  </span>
-                </div>
-                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
-                  <span class="align-middle">
-                    03, March '19
-                  </span>
-                </div>
-                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block book-stock">
-                  <strong class="d-inline d-md-none">Stock:</strong>2
+                  <em class="text-primary">Order Date: 03 Mar '19</em>
                 </div>
 
-                <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <div class="hover-visible-target book-delete-div">
-                    <a class="btn btn-light border-0 mr-1" href="#" data-toggle="tooltip" title="Remove Book">
-                      <i class="fas fa-trash text-danger"></i>
+                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
+                  <span class="align-middle">
+                    3
+                  </span>
+                </div>
+                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-start px-4 d-block book-stock">
+                  <strong class="d-inline d-md-none">Quantity:</strong>2
+                </div>
+
+
+                <div class="col-12 col-md-3 d-md-flex justify-content-center align-items-center d-block">
+                  <div class="book-delete-div">
+                    <a class="btn btn-light border-0 mr-1 btn-sm" href="#" data-toggle="tooltip" title="Accept Order">
+                      <i class="fas fa-check text-success mr-1"></i> Accept
+                    </a>
+                    <a class="btn btn-light border-0 mr-1 btn-sm" href="#" data-toggle="tooltip" title="Decline Order">
+                      <i class="fas fa-times text-danger mr-1"></i> Reject
                     </a>
                   </div>
                 </div>
@@ -463,26 +440,26 @@
                 <div class="col-md-4 book-info col-9">
                   <div>Elements of Mechanical Engineering</div>
                   <div class="text-muted small">Dr. D S Kumar</div>
-                  <em class="text-primary">Uploaded on 23 Mar, 19</em>
-                </div>
-                <div class="col-12 col-md-2 d-flex align-items-center book-category">
-                  <span class="align-middle">
-                    Engineering
-                  </span>
-                </div>
-                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
-                  <span class="align-middle">
-                    03, March '19
-                  </span>
-                </div>
-                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block book-stock">
-                  <strong class="d-inline d-md-none">Stock:</strong>2
+                  <em class="text-primary">Order Date: 03 Mar '19</em>
                 </div>
 
-                <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <div class="hover-visible-target book-delete-div">
-                    <a class="btn btn-light border-0 mr-1" href="#" data-toggle="tooltip" title="Remove Book">
-                      <i class="fas fa-trash text-danger"></i>
+                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
+                  <span class="align-middle">
+                    3
+                  </span>
+                </div>
+                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-start px-4 d-block book-stock">
+                  <strong class="d-inline d-md-none">Quantity:</strong>2
+                </div>
+
+
+                <div class="col-12 col-md-3 d-md-flex justify-content-center align-items-center d-block">
+                  <div class="book-delete-div">
+                    <a class="btn btn-light border-0 mr-1 btn-sm" href="#" data-toggle="tooltip" title="Accept Order">
+                      <i class="fas fa-check text-success mr-1"></i> Accept
+                    </a>
+                    <a class="btn btn-light border-0 mr-1 btn-sm" href="#" data-toggle="tooltip" title="Decline Order">
+                      <i class="fas fa-times text-danger mr-1"></i> Reject
                     </a>
                   </div>
                 </div>
@@ -497,26 +474,26 @@
                 <div class="col-md-4 book-info col-9">
                   <div>Statistical Methods of Finance</div>
                   <div class="text-muted small">Bruno Remillard</div>
-                  <em class="text-primary">Uploaded on 23 Mar, 19</em>
-                </div>
-                <div class="col-12 col-md-2 d-flex align-items-center book-category">
-                  <span class="align-middle">
-                    Finance
-                  </span>
-                </div>
-                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
-                  <span class="align-middle">
-                    03, March '19
-                  </span>
-                </div>
-                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block book-stock">
-                  <strong class="d-inline d-md-none">Stock:</strong>2
+                  <em class="text-primary">Order Date: 03 Mar '19</em>
                 </div>
 
-                <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <div class="hover-visible-target book-delete-div">
-                    <a class="btn btn-light border-0 mr-1" href="#" data-toggle="tooltip" title="Remove Book">
-                      <i class="fas fa-trash text-danger"></i>
+                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
+                  <span class="align-middle">
+                    3
+                  </span>
+                </div>
+                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-start px-4 d-block book-stock">
+                  <strong class="d-inline d-md-none">Quantity:</strong>2
+                </div>
+
+
+                <div class="col-12 col-md-3 d-md-flex justify-content-center align-items-center d-block">
+                  <div class="book-delete-div">
+                    <a class="btn btn-light border-0 mr-1 btn-sm" href="#" data-toggle="tooltip" title="Accept Order">
+                      <i class="fas fa-check text-success mr-1"></i> Accept
+                    </a>
+                    <a class="btn btn-light border-0 mr-1 btn-sm" href="#" data-toggle="tooltip" title="Decline Order">
+                      <i class="fas fa-times text-danger mr-1"></i> Reject
                     </a>
                   </div>
                 </div>
@@ -531,26 +508,26 @@
                 <div class="col-md-4 book-info col-9">
                   <div>Revolution 2020</div>
                   <div class="text-muted small">Chetan Bhagat</div>
-                  <em class="text-primary">Uploaded on 23 Mar, 19</em>
-                </div>
-                <div class="col-12 col-md-2 d-flex align-items-center book-category">
-                  <span class="align-middle">
-                    Novel
-                  </span>
-                </div>
-                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
-                  <span class="align-middle">
-                    03, March '19
-                  </span>
-                </div>
-                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block book-stock">
-                  <strong class="d-inline d-md-none">Stock:</strong>2
+                  <em class="text-primary">Order Date: 03 Mar '19</em>
                 </div>
 
-                <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <div class="hover-visible-target book-delete-div">
-                    <a class="btn btn-light border-0 mr-1" href="#" data-toggle="tooltip" title="Remove Book">
-                      <i class="fas fa-trash text-danger"></i>
+                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
+                  <span class="align-middle">
+                    3
+                  </span>
+                </div>
+                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-start px-4 d-block book-stock">
+                  <strong class="d-inline d-md-none">Quantity:</strong>2
+                </div>
+
+
+                <div class="col-12 col-md-3 d-md-flex justify-content-center align-items-center d-block">
+                  <div class="book-delete-div">
+                    <a class="btn btn-light border-0 mr-1 btn-sm" href="#" data-toggle="tooltip" title="Accept Order">
+                      <i class="fas fa-check text-success mr-1"></i> Accept
+                    </a>
+                    <a class="btn btn-light border-0 mr-1 btn-sm" href="#" data-toggle="tooltip" title="Decline Order">
+                      <i class="fas fa-times text-danger mr-1"></i> Reject
                     </a>
                   </div>
                 </div>
@@ -566,26 +543,26 @@
                 <div class="col-md-4 book-info col-9">
                   <div>Statistical Methods of Finance</div>
                   <div class="text-muted small">Bruno Remillard</div>
-                  <em class="text-primary">Uploaded on 23 Mar, 19</em>
-                </div>
-                <div class="col-12 col-md-2 d-flex align-items-center book-category">
-                  <span class="align-middle">
-                    Finance
-                  </span>
-                </div>
-                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
-                  <span class="align-middle">
-                    03, March '19
-                  </span>
-                </div>
-                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block book-stock">
-                  <strong class="d-inline d-md-none">Stock:</strong>2
+                  <em class="text-primary">Order Date: 03 Mar '19</em>
                 </div>
 
-                <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <div class="hover-visible-target book-delete-div">
-                    <a class="btn btn-light border-0 mr-1" href="#" data-toggle="tooltip" title="Remove Book">
-                      <i class="fas fa-trash text-danger"></i>
+                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
+                  <span class="align-middle">
+                    3
+                  </span>
+                </div>
+                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-start px-4 d-block book-stock">
+                  <strong class="d-inline d-md-none">Quantity:</strong>2
+                </div>
+
+
+                <div class="col-12 col-md-3 d-md-flex justify-content-center align-items-center d-block">
+                  <div class="book-delete-div">
+                    <a class="btn btn-light border-0 mr-1 btn-sm" href="#" data-toggle="tooltip" title="Accept Order">
+                      <i class="fas fa-check text-success mr-1"></i> Accept
+                    </a>
+                    <a class="btn btn-light border-0 mr-1 btn-sm" href="#" data-toggle="tooltip" title="Decline Order">
+                      <i class="fas fa-times text-danger mr-1"></i> Reject
                     </a>
                   </div>
                 </div>
@@ -600,26 +577,25 @@
                 <div class="col-md-4 book-info col-9">
                   <div>Revolution 2020</div>
                   <div class="text-muted small">Chetan Bhagat</div>
-                  <em class="text-primary">Uploaded on 23 Mar, 19</em>
-                </div>
-                <div class="col-12 col-md-2 d-flex align-items-center book-category">
-                  <span class="align-middle">
-                    Novel
-                  </span>
-                </div>
-                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
-                  <span class="align-middle">
-                    03, March '19
-                  </span>
-                </div>
-                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block book-stock">
-                  <strong class="d-inline d-md-none">Stock:</strong>2
+                  <em class="text-primary">Order Date: 03 Mar '19</em>
                 </div>
 
-                <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <div class="hover-visible-target book-delete-div">
-                    <a class="btn btn-light border-0 mr-1" href="#" data-toggle="tooltip" title="Remove Book">
-                      <i class="fas fa-trash text-danger"></i>
+                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
+                  <span class="align-middle">
+                    3
+                  </span>
+                </div>
+                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-start px-4 d-block book-stock">
+                  <strong class="d-inline d-md-none">Quantity:</strong>2
+                </div>
+
+                <div class="col-12 col-md-3 d-md-flex justify-content-center align-items-center d-block">
+                  <div class="book-delete-div">
+                    <a class="btn btn-light border-0 mr-1 btn-sm" href="#" data-toggle="tooltip" title="Accept Order">
+                      <i class="fas fa-check text-success mr-1"></i> Accept
+                    </a>
+                    <a class="btn btn-light border-0 mr-1 btn-sm" href="#" data-toggle="tooltip" title="Decline Order">
+                      <i class="fas fa-times text-danger mr-1"></i> Reject
                     </a>
                   </div>
                 </div>
@@ -634,26 +610,26 @@
                 <div class="col-md-4 book-info col-9">
                   <div>Statistical Methods of Finance</div>
                   <div class="text-muted small">Bruno Remillard</div>
-                  <em class="text-primary">Uploaded on 23 Mar, 19</em>
-                </div>
-                <div class="col-12 col-md-2 d-flex align-items-center book-category">
-                  <span class="align-middle">
-                    Finance
-                  </span>
-                </div>
-                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
-                  <span class="align-middle">
-                    03, March '19
-                  </span>
-                </div>
-                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block book-stock">
-                  <strong class="d-inline d-md-none">Stock:</strong>2
+                  <em class="text-primary">Order Date: 03 Mar '19</em>
                 </div>
 
-                <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <div class="hover-visible-target book-delete-div">
-                    <a class="btn btn-light border-0 mr-1" href="#" data-toggle="tooltip" title="Remove Book">
-                      <i class="fas fa-trash text-danger"></i>
+                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
+                  <span class="align-middle">
+                    3
+                  </span>
+                </div>
+                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-start px-4 d-block book-stock">
+                  <strong class="d-inline d-md-none">Quantity:</strong>2
+                </div>
+
+
+                <div class="col-12 col-md-3 d-md-flex justify-content-center align-items-center d-block">
+                  <div class="book-delete-div">
+                    <a class="btn btn-light border-0 mr-1 btn-sm" href="#" data-toggle="tooltip" title="Accept Order">
+                      <i class="fas fa-check text-success mr-1"></i> Accept
+                    </a>
+                    <a class="btn btn-light border-0 mr-1 btn-sm" href="#" data-toggle="tooltip" title="Decline Order">
+                      <i class="fas fa-times text-danger mr-1"></i> Reject
                     </a>
                   </div>
                 </div>
@@ -668,26 +644,25 @@
                 <div class="col-md-4 book-info col-9">
                   <div>Revolution 2020</div>
                   <div class="text-muted small">Chetan Bhagat</div>
-                  <em class="text-primary">Uploaded on 23 Mar, 19</em>
-                </div>
-                <div class="col-12 col-md-2 d-flex align-items-center book-category">
-                  <span class="align-middle">
-                    Novel
-                  </span>
-                </div>
-                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
-                  <span class="align-middle">
-                    03, March '19
-                  </span>
-                </div>
-                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-center d-block book-stock">
-                  <strong class="d-inline d-md-none">Stock:</strong>2
+                  <em class="text-primary">Order Date: 03 Mar '19</em>
                 </div>
 
-                <div class="col-12 col-md-1 d-md-flex justify-content-center align-items-center d-block">
-                  <div class="hover-visible-target book-delete-div">
-                    <a class="btn btn-light border-0 mr-1" href="#" data-toggle="tooltip" title="Remove Book">
-                      <i class="fas fa-trash text-danger"></i>
+                <div class="col-12 col-md-2 d-flex align-items-center book-last-order">
+                  <span class="align-middle">
+                    3
+                  </span>
+                </div>
+                <div class="col-12 col-md-2 d-md-flex align-items-center justify-content-start px-4 d-block book-stock">
+                  <strong class="d-inline d-md-none">Quantity:</strong>2
+                </div>
+
+                <div class="col-12 col-md-3 d-md-flex justify-content-center align-items-center d-block">
+                  <div class="book-delete-div">
+                    <a class="btn btn-light border-0 mr-1 btn-sm" href="#" data-toggle="tooltip" title="Accept Order">
+                      <i class="fas fa-check text-success mr-1"></i> Accept
+                    </a>
+                    <a class="btn btn-light border-0 mr-1 btn-sm" href="#" data-toggle="tooltip" title="Decline Order">
+                      <i class="fas fa-times text-danger mr-1"></i> Reject
                     </a>
                   </div>
                 </div>
