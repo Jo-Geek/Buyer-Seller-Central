@@ -220,8 +220,34 @@
             <div class="card border-0 shadow-sm mb-4">
 
               <div class="card-body">
-                <button class="btn btn-card-right shadow hover-shadow" data-toggle="tooltip"
-                  title="View for this month"><i class="fas fa-calendar-alt"></i></button>
+                <div class="dropdown">
+                  <button class="btn btn-card-right shadow hover-shadow" data-toggle="dropdown" title="Filter"><i
+                      class="fas fa-calendar-alt"></i></button>
+
+                  <div class="dropdown-menu shadow rounded" style="width:200px;">
+                    <form class="px-3 py-2">
+                      <div class="form-group">
+                        <label for="exampleDropdownFormEmail1">From
+                          date
+                        </label>
+                        <input type="date" class="form-control form-control-sm" />
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleDropdownFormPassword1">To date</label>
+                        <input type="date" class="form-control form-control-sm" />
+                      </div>
+
+                    </form>
+                    <div class="px-3">
+                      <button type="button" class="btn btn-primary btn-sm btn-block">Apply filter</button>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-center" href="#">Clear Filter</a>
+
+                  </div>
+
+                </div>
+
                 <h4 class="text-center mb-0 rev-chart-title">Revenue Summary</h4>
                 <div class="text-muted mt-1 text-center">This year</div>
 
@@ -236,8 +262,34 @@
           <div class="col-12 col-md-6 col-lg-5">
             <div class="card border-0 shadow-sm s">
               <div class="card-body">
-                <button class="btn btn-card-right shadow hover-shadow reverse" data-toggle="tooltip" title="View all"><i
-                    class="fas fa-list"></i></button>
+                <div class="dropdown">
+                  <button class="btn btn-card-right shadow hover-shadow reverse" data-toggle="dropdown"
+                    title="Filter"><i class="fas fa-calendar-alt"></i></button>
+
+                  <div class="dropdown-menu shadow rounded" style="width:200px;">
+                    <form class="px-3 py-2">
+                      <div class="form-group">
+                        <label for="exampleDropdownFormEmail1">From
+                          date
+                        </label>
+                        <input type="date" class="form-control form-control-sm" />
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleDropdownFormPassword1">To date</label>
+                        <input type="date" class="form-control form-control-sm" />
+                      </div>
+
+                    </form>
+                    <div class="px-3">
+                      <button type="button" class="btn btn-primary btn-sm btn-block">Apply filter</button>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-center" href="#">Clear Filter</a>
+
+                  </div>
+
+                </div>
+
                 <h4 class="mb-0 pending-list-title">Pending Orders</h4>
                 <div class="text-muted mt-1">Most Delayed</div>
 
@@ -488,8 +540,35 @@
           <div class="col-12 col-md-6 col-lg-5">
             <div class="card border-0 shadow-sm mb-4">
               <div class="card-body">
-                <button class="btn btn-card-right shadow hover-shadow" data-toggle="tooltip"
-                  title="View overall stats"><i class="fas fa-calendar-alt"></i></button>
+                  <div class="dropdown">
+                      <button class="btn btn-card-right shadow hover-shadow" data-toggle="dropdown"
+                        title="Filter"><i class="fas fa-calendar-alt"></i></button>
+    
+                      <div class="dropdown-menu shadow rounded" style="width:200px;">
+                        <form class="px-3 py-2">
+                          <div class="form-group">
+                            <label for="exampleDropdownFormEmail1">From
+                              date
+                            </label>
+                            <input type="date" class="form-control form-control-sm" />
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleDropdownFormPassword1">To date</label>
+                            <input type="date" class="form-control form-control-sm" />
+                          </div>
+    
+                        </form>
+                        <div class="px-3">
+                          <button type="button" class="btn btn-primary btn-sm btn-block">Apply filter</button>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-center" href="#">Clear Filter</a>
+    
+                      </div>
+    
+                    </div>
+
+
                 <h4 class="mb-0 rev-chart-title">Top Selling Books</h4>
                 <div class="text-muted mt-1">This Month</div>
 
@@ -594,8 +673,35 @@
           <div class="col-12 col-md-6 col-lg-7">
             <div class="card border-0 shadow-sm mb-4">
               <div class="card-body">
-                <button class="btn btn-card-right shadow hover-shadow reverse" data-toggle="tooltip"
-                  title="View overall feedbacks"><i class="fas fa-calendar-alt"></i></button>
+
+                  <div class="dropdown">
+                      <button class="btn btn-card-right shadow hover-shadow reverse" data-toggle="dropdown"
+                        title="Filter"><i class="fas fa-calendar-alt"></i></button>
+    
+                      <div class="dropdown-menu shadow rounded" style="width:200px;">
+                        <form class="px-3 py-2">
+                          <div class="form-group">
+                            <label for="exampleDropdownFormEmail1">From
+                              date
+                            </label>
+                            <input type="date" class="form-control form-control-sm" />
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleDropdownFormPassword1">To date</label>
+                            <input type="date" class="form-control form-control-sm" />
+                          </div>
+    
+                        </form>
+                        <div class="px-3">
+                          <button type="button" class="btn btn-primary btn-sm btn-block">Apply filter</button>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-center" href="#">Clear Filter</a>
+    
+                      </div>
+    
+                    </div>
+
                 <h4 class="mb-0 pending-list-title">Customer Feedback</h4>
                 <div class="text-muted mt-1">This Month</div>
 
@@ -609,20 +715,20 @@
                           <span class="float-right text-right text-success">12 Mar '19</span>
                         </div>
                         <div class="dropdown">
-                            <div class="text-primary small" data-toggle="dropdown">For &lt;book name here&gt;</div>
-                            <div class="dropdown-menu shadow border-0 rounded" style="min-width:250px;">
-                              <div class="dropdown-item-text clearfix">
-  
-                                <img class="float-left" src="assets/img/books/9781439.1.jpg" style="width:30px;" />
-                                <div class="float-left pl-3">
-                                  <div>Book Name</div>
-                                  <div class="text-muted small">Author Name</div>
-                                  <h5 class="mt-2 text-warning">&#8377;345</h5>
-                                </div>
-  
+                          <div class="text-primary small" data-toggle="dropdown">For &lt;book name here&gt;</div>
+                          <div class="dropdown-menu shadow border-0 rounded" style="min-width:250px;">
+                            <div class="dropdown-item-text clearfix">
+
+                              <img class="float-left" src="assets/img/books/9781439.1.jpg" style="width:30px;" />
+                              <div class="float-left pl-3">
+                                <div>Book Name</div>
+                                <div class="text-muted small">Author Name</div>
+                                <h5 class="mt-2 text-warning">&#8377;345</h5>
                               </div>
+
                             </div>
                           </div>
+                        </div>
                         <div class="">Aliquam erat volutpat. Nullam sed ultrices tellus, at faucibus arcu.
                           Etiam nec lobortis
                           risus. Phasellus nec pretium velit.</div>
@@ -639,20 +745,20 @@
                           <span class="float-right text-right text-success">12 Mar '19</span>
                         </div>
                         <div class="dropdown">
-                            <div class="text-primary small" data-toggle="dropdown">For &lt;book name here&gt;</div>
-                            <div class="dropdown-menu shadow border-0 rounded" style="min-width:250px;">
-                              <div class="dropdown-item-text clearfix">
-  
-                                <img class="float-left" src="assets/img/books/9781439.1.jpg" style="width:30px;" />
-                                <div class="float-left pl-3">
-                                  <div>Book Name</div>
-                                  <div class="text-muted small">Author Name</div>
-                                  <h5 class="mt-2 text-warning">&#8377;345</h5>
-                                </div>
-  
+                          <div class="text-primary small" data-toggle="dropdown">For &lt;book name here&gt;</div>
+                          <div class="dropdown-menu shadow border-0 rounded" style="min-width:250px;">
+                            <div class="dropdown-item-text clearfix">
+
+                              <img class="float-left" src="assets/img/books/9781439.1.jpg" style="width:30px;" />
+                              <div class="float-left pl-3">
+                                <div>Book Name</div>
+                                <div class="text-muted small">Author Name</div>
+                                <h5 class="mt-2 text-warning">&#8377;345</h5>
                               </div>
+
                             </div>
                           </div>
+                        </div>
                         <div class="">Aliquam erat volutpat. Nullam sed ultrices tellus, at faucibus arcu.
                           Etiam nec lobortis
                           risus. Phasellus nec pretium velit.</div>
@@ -667,20 +773,20 @@
                           <span class="float-right text-right text-success">12 Mar '19</span>
                         </div>
                         <div class="dropdown">
-                            <div class="text-primary small" data-toggle="dropdown">For &lt;book name here&gt;</div>
-                            <div class="dropdown-menu shadow border-0 rounded" style="min-width:250px;">
-                              <div class="dropdown-item-text clearfix">
-  
-                                <img class="float-left" src="assets/img/books/9781439.1.jpg" style="width:30px;" />
-                                <div class="float-left pl-3">
-                                  <div>Book Name</div>
-                                  <div class="text-muted small">Author Name</div>
-                                  <h5 class="mt-2 text-warning">&#8377;345</h5>
-                                </div>
-  
+                          <div class="text-primary small" data-toggle="dropdown">For &lt;book name here&gt;</div>
+                          <div class="dropdown-menu shadow border-0 rounded" style="min-width:250px;">
+                            <div class="dropdown-item-text clearfix">
+
+                              <img class="float-left" src="assets/img/books/9781439.1.jpg" style="width:30px;" />
+                              <div class="float-left pl-3">
+                                <div>Book Name</div>
+                                <div class="text-muted small">Author Name</div>
+                                <h5 class="mt-2 text-warning">&#8377;345</h5>
                               </div>
+
                             </div>
                           </div>
+                        </div>
                         <div class="">Aliquam erat volutpat. Nullam sed ultrices tellus, at faucibus arcu.
                           Etiam nec lobortis
                           risus. Phasellus nec pretium velit.</div>
@@ -696,20 +802,20 @@
                           <span class="float-right text-right text-success">12 Mar '19</span>
                         </div>
                         <div class="dropdown">
-                            <div class="text-primary small" data-toggle="dropdown">For &lt;book name here&gt;</div>
-                            <div class="dropdown-menu shadow border-0 rounded" style="min-width:250px;">
-                              <div class="dropdown-item-text clearfix">
-  
-                                <img class="float-left" src="assets/img/books/9781439.1.jpg" style="width:30px;" />
-                                <div class="float-left pl-3">
-                                  <div>Book Name</div>
-                                  <div class="text-muted small">Author Name</div>
-                                  <h5 class="mt-2 text-warning">&#8377;345</h5>
-                                </div>
-  
+                          <div class="text-primary small" data-toggle="dropdown">For &lt;book name here&gt;</div>
+                          <div class="dropdown-menu shadow border-0 rounded" style="min-width:250px;">
+                            <div class="dropdown-item-text clearfix">
+
+                              <img class="float-left" src="assets/img/books/9781439.1.jpg" style="width:30px;" />
+                              <div class="float-left pl-3">
+                                <div>Book Name</div>
+                                <div class="text-muted small">Author Name</div>
+                                <h5 class="mt-2 text-warning">&#8377;345</h5>
                               </div>
+
                             </div>
                           </div>
+                        </div>
                         <div class="">Aliquam erat volutpat. Nullam sed ultrices tellus, at faucibus arcu.
                           Etiam nec lobortis
                           risus. Phasellus nec pretium velit.</div>
