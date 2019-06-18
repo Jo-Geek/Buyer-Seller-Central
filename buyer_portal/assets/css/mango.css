@@ -1,0 +1,460 @@
+/*!
+ * Mango CSS
+ * Jones Joseph
+ * For Bookmart
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,700');
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: .9rem;
+  color: #495057;
+}
+
+.navbar {
+  border-bottom: 3px solid #718f40;
+}
+
+.nav-search {
+  position: relative;
+}
+
+.btn-nav-search {
+  position: absolute;
+  right: 0rem;
+  color: var(--secondary);
+  border-color: #ced4da;
+}
+
+.banner-cta {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  top: 250px;
+  left: 100px;
+  width: 400px;
+}
+
+body.home {
+  /* background-image: url(../img/sectionbg.png); */
+  background-position: center center;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+section.bg-light {
+  background-color: rgba(0, 0, 0, 0.025) !important;
+}
+
+section.bg-white {
+  background-color: rgba(255, 255, 255, 0.025) !important;
+}
+
+section.courses-bg {
+  background: rgb(39, 59, 226);
+  background: -moz-linear-gradient(left, rgba(39, 59, 226, 1) 1%, rgba(39, 59, 226, 1) 49%, rgba(223, 237, 255, 1) 50%, rgba(223, 237, 255, 1) 100%);
+  background: -webkit-linear-gradient(left, rgba(39, 59, 226, 1) 1%, rgba(39, 59, 226, 1) 49%, rgba(223, 237, 255, 1) 50%, rgba(223, 237, 255, 1) 100%);
+  background: linear-gradient(to right, rgba(39, 59, 226, 1) 1%, rgba(39, 59, 226, 1) 49%, rgba(223, 237, 255, 1) 50%, rgba(223, 237, 255, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#273be2', endColorstr='#dfedff', GradientType=1);
+}
+
+section.courses {
+  background-image: url(../img/bg_courses.png);
+  background-repeat: no-repeat;
+  background-position: -50px center;
+  background-size: contain;
+}
+
+section.features {
+  background-color: #DFEDFF;
+  position: relative;
+}
+
+section.features:before {
+  content: '';
+  position: absolute;
+  height: 35px;
+  width: 100%;
+  background: -moz-linear-gradient(top, rgba(132, 206, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-linear-gradient(top, rgba(132, 206, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to bottom, rgba(132, 206, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84ceff', endColorstr='#00ffffff', GradientType=0);
+  top: 0;
+  left: 0;
+}
+
+.features-icon {
+  height: 90px;
+}
+
+img.features-arrow {
+  height: 20px;
+  position: absolute;
+  top: calc(50% - 15px);
+  right: 0;
+  transform: translateX(50%) translateY(-50%);
+}
+
+section.jobs .container {
+  position: relative;
+  margin-bottom: 4rem
+}
+
+section.jobs .container:after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: #0A63E0;
+  right: 15px;
+  top: 42px;
+}
+
+section.jobs .section-title {
+  margin-bottom: 3rem;
+}
+
+section.jobs .section-title:after {
+  width: 100%;
+  background-color: #0A63E0;
+}
+
+section.jobs .section-title+p {
+  position: absolute;
+  top: 7px;
+  right: 15px;
+  background-color: #0A63E0;
+  color: white;
+  padding: .4rem .5rem
+}
+
+section.jobs .section-title+p:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -32px;
+  border: 16px solid transparent;
+  border-right-color: #0A63E0;
+  border-bottom-color: #0A63E0;
+}
+
+section.jobs .btn-carousel-left {
+  height: 46px;
+  width: 46px;
+  left: -56px;
+}
+
+section.jobs .btn-carousel-right {
+  z-index: 1;
+  right: -48.5px;
+}
+
+section.jobs .btn-carousel-right:before {
+  content: '';
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border: 7.7px solid #0a63e0;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+section.jobs .btn-more {
+  position: absolute;
+  right: 15px;
+  margin-top: 2rem;
+  z-index: 1;
+  border-radius: 0;
+  background-color: #0a63e0;
+  border: none;
+}
+
+section.jobs .btn-more:before {
+  content: '';
+  position: absolute;
+  border: 14.5px solid transparent;
+  border-right-color: #0a63e0;
+  border-bottom-color: #0a63e0;
+  top: 0;
+  left: -29px;
+}
+
+section.jobs .btn-more:hover {
+  background-color: #273be2;
+}
+
+section.jobs .btn-more:hover:before {
+  border-right-color: #273be2;
+  border-bottom-color: #273be2;
+}
+
+section.assessments {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+section.assessments:after {
+  content: '';
+  position: absolute;
+  height: 1000px;
+  width: 454px;
+  background-color: #133e7b;
+  transform: rotate(-33deg);
+  top: -100px;
+  z-index: -1;
+}
+
+section.assessments:before {
+  content: '';
+  position: absolute;
+  height: 1000px;
+  width: 671px;
+  background-color: #5798f3;
+  transform: rotate(-33deg);
+  top: -100px;
+  z-index: -1;
+}
+
+.section-title {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.section-subtitle {
+  font-size: 65%;
+  color: var(--muted);
+  font-weight: 300;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  height: 5px;
+  width: 50px;
+  background-color: #273be2;
+  left: 0;
+}
+
+.carousel-control {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+}
+
+.btn-carousel {
+  position: absolute;
+  border: 1px solid #dee2e6;
+  background-color: white;
+  height: 36px;
+  width: 36px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-50%);
+}
+
+.btn-carousel:hover, .btn-carousel:focus {
+  background-color: #f4f4f4;
+}
+
+.btn-carousel-left {
+  left: -40px;
+}
+
+.btn-carousel-right {
+  right: -40px;
+}
+
+.ratings {
+  font-size: 90%;
+}
+
+.ribbon-course-value {
+  position: absolute;
+  right: 0;
+  top: .75rem;
+  padding: .25rem .5rem;
+  background-color: #58379F;
+  color: white;
+}
+
+.ribbon-course-value:before {
+  content: '';
+  position: absolute;
+  border: 12.5px solid #58379F;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  left: -12.5px;
+  top: 0;
+}
+
+footer {
+  box-shadow: 0 -.5rem 1rem rgba(0, 0, 0, .15)!important
+}
+
+[class*=social-link-] {
+  margin-right: .5rem;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+[class*=social-link-]:hover, [class*=social-link-]:focus {
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.3);
+}
+
+.social-link-fb {
+  background-color: #3b5998;
+}
+
+.social-link-li {
+  background-color: #007AB9;
+}
+
+.social-link-tw {
+  background-color: #55ACEE;
+}
+
+.social-link-angel {
+  background-color: #808080;
+}
+
+.banner-category-filter {
+  background: rgb(0, 0, 0);
+  background: -moz-linear-gradient(-45deg, rgba(0, 0, 0, 1) 0%, rgba(54, 68, 93, 1) 100%);
+  background: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 1) 0%, rgba(54, 68, 93, 1) 100%);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(54, 68, 93, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#36445d', GradientType=1);
+}
+
+.banner-course-header {
+  background-image: url('../img/coursedetailheader.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.course-levels {
+  position: relative;
+  width: 100%;
+}
+
+.course-levels:before {
+  content: '';
+  position: absolute;
+  height: 5px;
+  background: white;
+  left: 80px;
+  right: 80px;
+  top: 40px;
+}
+
+.course-levels [class*=level-] {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  height: 80px;
+  width: 80px;
+  border: 5px solid white;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 .25rem 1rem rgba(0, 0, 0, 0.5), inset 0 0 .5rem rgb(0, 0, 0, 0.5);
+}
+
+.course-levels [class*=level-] span {
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  left: 50%;
+  bottom: -2.5rem;
+  transform: translateX(-50%);
+  text-shadow: 0 0 0.5ren rgba(0, 0, 0, 0.3);
+}
+
+.level-basic {
+  left: 0;
+}
+
+.level-intermediate {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.level-expert {
+  right: 0
+}
+
+.level-basic:before {
+  content: '';
+  position: absolute;
+  background: linear-gradient(to bottom, transparent 0%, transparent 70%, var(--orange) 71%, var(--orange) 100%);
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.level-intermediate:before {
+  content: '';
+  position: absolute;
+  background: linear-gradient(to bottom, transparent 0%, transparent 50%, var(--primary) 51%, var(--primary) 100%);
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.level-expert:before {
+  content: '';
+  position: absolute;
+  background: var(--success);
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.card-course-videos {
+  top: 80px;
+}
+
+.list-course-videos {
+  max-height: calc(100vh - 180px);
+  overflow-y: auto;
+}
+
+.section-or {
+  position: relative;
+}
+
+.section-or:before {
+  content: "OR";
+  position: absolute;
+  padding: .25rem .5rem;
+  background-color: white;
+  top: 0;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+#mSignUp .text-light {
+  opacity: .75;
+}
+
+#mSignUp h5 {
+  text-shadow: 0 0.05em 0.5rem rgba(0, 0, 0, 0.2);
+}

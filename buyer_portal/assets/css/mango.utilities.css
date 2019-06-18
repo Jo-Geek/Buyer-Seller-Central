@@ -1,0 +1,17 @@
+/*!
+ * Mango Utility CSS
+ * Jones Joseph
+ * For Bookmart
+ */
+
+.text-yellow {
+    color: var(--yellow) !important;
+}
+
+.text-muted{
+    opacity:.65;
+}
+
+.display-5{
+    font-size:3rem;
+}
