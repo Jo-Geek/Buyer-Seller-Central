@@ -13,8 +13,10 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" /> -->
+
+  <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css" />
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -37,562 +39,665 @@
   <script src="assets/js/index.js"></script>
   <script src="assets/js/flags.js"></script>
 
+
+  <meta name="theme-color" content="#008cba" />
 </head>
 
 <body class="home">
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="assets/img/logo.png" height="30" class="d-inline-block align-top" alt="" />
-        <!-- <strong class="text-secondary">Bookmart</strong> -->
-      </a>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="pt-0">
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-2">
-
-          <li class="nav-item dropdown">
-            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
-              Categories <small class="fas fa-chevron-down"></small>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Coming soon</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="categories.html">See all categories</a>
+      <!-- <div id="dismiss">
+                <i class="fas fa-arrow-left"></i>
             </div>
-          </li>
+     -->
+      <div class="sidebar-header bg-primary text-white d-none">
 
-        </ul>
-        <form class="form-inline my-2 my-lg-0 nav-search">
-          <input class="form-control mr-sm-2 form-control-sm rounded-pill px-3" style="min-width:300px;" type="search"
-            placeholder="What book would you like to buy?" aria-label="Search">
-          <button class="btn btn-sm btn-light rounded-pill btn-nav-search"><i class="fas fa-search"></i></button>
-        </form>
+      </div>
 
-        <ul class="navbar-nav ml-auto">
+      <ul class="list-unstyled components">
+        <li>
+          <a class="btn btn-primary btn-sm rounded-0 border-0 text-left" href="#">
+            <i class="fas fa-user fa-fw mr-2"></i> Login or Signup
+          </a>
+        </li>
+
+        <li class="d-none">
+          <a href="#">About</a>
+          <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
+          <ul class="collapse list-unstyled" id="pageSubmenu">
+            <li>
+              <a href="#">Page 1</a>
+            </li>
+            <li>
+              <a href="#">Page 2</a>
+            </li>
+            <li>
+              <a href="#">Page 3</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Top selling Books</a>
+        </li>
+        <li>
+          <a href="#">Recomended for you</a>
+        </li>
+        <li>
+          <a href="#">Engineering</a>
+        </li>
+        <li>
+          <a href="#">Arts and Science</a>
+        </li>
+        <li>
+          <a href="#">Medicine</a>
+        </li>
+        <li>
+          <a href="#">Novels</a>
+        </li>
+        <li class="border-top">
+          <a href="#">My Orders</a>
+        </li>
+        <li>
+          <a href="#">My Wishlist</a>
+        </li>
+        <li>
+          <a href="#">My Account</a>
+        </li>
+        <li class="border-top">
+          <a href="#">Help Center</a>
+        </li>
+        <li>
+          <a href="#">Sell on Bookpark</a>
+        </li>
+        <li>
+          <a href="#">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="#">Terms of use</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Page Content -->
+    <div id="content">
 
 
-          <li class="nav-item dropdown">
-            <a class="nav-link" href="#" data-toggle="dropdown">Login</a>
-            <div class="dropdown-menu shadow dropdown-menu-right" style="width:300px;">
-              <form class="px-4 py-3">
-                <div class="form-group">
-                  <label for="exampleDropdownFormEmail1">Email address</label>
-                  <input type="email" class="form-control form-control-sm" id="exampleDropdownFormEmail1"
-                    placeholder="email@example.com">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm sticky-top">
+        <div class="container">
+          <div class="w-100">
+          <a id="sidebarCollapse" class="d-inline-block d-md-none text-light">
+            <i class="fas fa-bars"></i>
+
+          </a>
+
+          <a class="navbar-brand ml-3 mr-auto ml-md-0 mr-md-3" href="index.html">
+            <!-- <img src="assets/img/logo.png" height="30" class="d-inline-block align-top" alt="" /> -->
+            <strong class="text-yellow">Bookpark</strong>
+          </a>
+
+          <span class="ml-auto mr-0 d-inline-block d-md-none float-right py-2">
+            <a href="#" class="text-light mr-3">
+              <i class="fas fa-shopping-cart"></i>
+              <sup class="badge badge-pill badge-danger">2</sup>
+            </a>
+            <a href="#" class="text-light">Login</a>
+          </span>
+        </div>
+          <div class="d-flex d-md-none my-2 w-100">
+              <form class="nav-search w-100">
+                  <input class="form-control form-control-md w-100 rounded-pill px-3"
+                    type="search" placeholder="What book would you like to buy?" aria-label="Search">
+                  <button class="btn btn-light rounded-pill btn-nav-search px-3"><i class="fas fa-search"></i></button>
+                </form>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-2">
+
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  Categories <small class="fas fa-chevron-down"></small>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Coming soon</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="categories.html">See all categories</a>
                 </div>
-                <div class="form-group">
-                  <label for="exampleDropdownFormPassword1">Password</label>
-                  <input type="password" class="form-control form-control-sm" id="exampleDropdownFormPassword1"
-                    placeholder="Password">
+              </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0 nav-search">
+              <input class="form-control mr-sm-2 form-control-sm rounded-pill px-3" style="min-width:300px;"
+                type="search" placeholder="What book would you like to buy?" aria-label="Search">
+              <button class="btn btn-sm btn-light rounded-pill btn-nav-search"><i class="fas fa-search"></i></button>
+            </form>
+
+            <ul class="navbar-nav ml-auto">
+
+
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#" data-toggle="dropdown">Login</a>
+                <div class="dropdown-menu shadow dropdown-menu-right" style="width:300px;">
+                  <form class="px-4 py-3">
+                    <div class="form-group">
+                      <label for="exampleDropdownFormEmail1">Email address</label>
+                      <input type="email" class="form-control form-control-sm" id="exampleDropdownFormEmail1"
+                        placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleDropdownFormPassword1">Password</label>
+                      <input type="password" class="form-control form-control-sm" id="exampleDropdownFormPassword1"
+                        placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Remember Me</label>
+                      </div>
+                    </div>
+                    <div class="clearfix">
+                      <button type="submit" class="btn btn-info btn-sm">Login</button>
+
+                      <button class="float-right btn btn-sm btn-danger rounded-pill shadow-sm">
+                        <i class="fab fa-google"></i>
+                      </button>
+                      <button class="float-right btn btn-sm btn-primary rounded-pill mr-1 shadow-sm">
+                        <i class="fab fa-facebook-f" style="padding:0 .2rem"></i>
+                      </button>
+                    </div>
+                  </form>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Forgot password?</a>
                 </div>
-                <div class="form-group">
-                  <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                    <label class="custom-control-label" for="customCheck1">Remember Me</label>
+              </li>
+
+            </ul>
+            <button class="btn btn-sm btn-danger shadow-sm ml-0" data-toggle="modal" data-target="#mSignUp">Sign
+              up</button>
+          </div>
+        </div>
+      </nav>
+
+      <nav class="sub-nav bg-light border-bottom shadow-sm pt-3 pb-2 text-nowrap mb-3 w-100 overflow-auto">
+        <a href="#" class="px-3">Engineeering</a>
+        <a href="#" class="px-3">Meths</a>
+        <a href="#" class="px-3">Arts & Science</a>
+        <a href="#" class="px-3">Medicine</a>
+        <a href="#" class="px-3">Medicine</a>
+        <a href="#" class="px-3">Novels</a>
+      </nav>
+
+      
+      <section class="bg-white pt-4 pb-4">
+
+          <div class="container-fluid text-center">
+            <h5 class="font-weight-normal">Books Recomended for you</h5>
+            <div class="text-muted mt-2 pb-2 border-bottom mb-4">Similar items to what you viewed before</div>
+  
+            <div class="row">
+              <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="card mb-4 hover-shadow border-0">
+                  <div class="card-body py-2 px-2 rounded">
+                    <div class="text-center">
+                      <div class="mb-3">
+                        <img style="max-height:100px" src="assets/img/books/2312414.1.jpg" />
+                      </div>
+                      <div>
+  
+                        <strong class="mb-0 text-truncate d-block" style="white-space: nowrap">Basic Electrical and
+                          Electronis
+                          Engg.</strong>
+                        <div class="text-muted">Engineering Books</div>
+                        <h4 class="text-warning font-weight-light mt-2 mt-md-3">&#x20B9; 345 <strike class="small d-block text-muted mt-1">456</strike>
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+  
+  
+                </div>
+              </div>
+  
+              <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="card mb-4 hover-shadow border-0">
+                  <div class="card-body py-2 px-2 rounded">
+                    <div class="text-center">
+                      <div class="mb-3">
+                        <img style="max-height:100px" src="assets/img/books/978935.1.jpg" />
+                      </div>
+                      <div>
+  
+                        <strong class="mb-0 text-truncate d-block" style="white-space: nowrap">Basic Electrical and
+                          Electronis
+                          Engg.</strong>
+                        <div class="text-muted">Engineering Books</div>
+                        <h4 class="text-warning font-weight-light mt-2 mt-md-3">&#x20B9; 345 <strike class="small d-block text-muted mt-1">456</strike>
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+  
+  
+                </div>
+              </div>
+  
+              <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="card mb-4 hover-shadow border-0">
+                  <div class="card-body py-2 px-2 rounded">
+                    <div class="text-center">
+                      <div class="mb-3">
+                        <img style="max-height:100px" src="assets/img/books/2312414.1.jpg" />
+                      </div>
+                      <div>
+  
+                        <strong class="mb-0 text-truncate d-block" style="white-space: nowrap">Basic Electrical and
+                          Electronis
+                          Engg.</strong>
+                        <div class="text-muted">Engineering Books</div>
+                        <h4 class="text-warning font-weight-light mt-2 mt-md-3">&#x20B9; 345 <strike class="small d-block text-muted mt-1">456</strike>
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+  
+  
+                </div>
+              </div>
+  
+              <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="card mb-4 hover-shadow border-0">
+                  <div class="card-body py-2 px-2 rounded">
+                    <div class="text-center">
+                      <div class="mb-3">
+                        <img style="max-height:100px" src="assets/img/books/3423434.1.jpg" />
+                      </div>
+                      <div>
+  
+                        <strong class="mb-0 text-truncate d-block" style="white-space: nowrap">Basic Electrical and
+                          Electronis
+                          Engg.</strong>
+                        <div class="text-muted">Engineering Books</div>
+                        <h4 class="text-warning font-weight-light mt-2 mt-md-3">&#x20B9; 345 <strike class="small d-block text-muted mt-1">456</strike>
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+  
+  
+                </div>
+              </div>
+  
+              <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="card mb-4 hover-shadow border-0">
+                  <div class="card-body py-2 px-2 rounded">
+                    <div class="text-center">
+                      <div class="mb-3">
+                        <img style="max-height:100px" src="assets/img/books/9781439.1.jpg" />
+                      </div>
+                      <div>
+  
+                        <strong class="mb-0 text-truncate d-block" style="white-space: nowrap">Basic Electrical and
+                          Electronis
+                          Engg.</strong>
+                        <div class="text-muted">Engineering Books</div>
+                        <h4 class="text-warning font-weight-light mt-2 mt-md-3">&#x20B9; 345 <strike class="small d-block text-muted mt-1">456</strike>
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+  
+  
+                </div>
+              </div>
+  
+              <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="card mb-4 hover-shadow border-0">
+                  <div class="card-body py-2 px-2 rounded">
+                    <div class="text-center">
+                      <div class="mb-3">
+                        <img style="max-height:100px" src="assets/img/books/978935.1.jpg" />
+                      </div>
+                      <div>
+  
+                        <strong class="mb-0 text-truncate d-block" style="white-space: nowrap">Basic Electrical and
+                          Electronis
+                          Engg.</strong>
+                        <div class="text-muted">Engineering Books</div>
+                        <h4 class="text-warning font-weight-light mt-2 mt-md-3">&#x20B9; 345 <strike class="small d-block text-muted mt-1">456</strike>
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+  
+  
+                </div>
+              </div>
+  
+            </div>
+  
+          </div>
+  
+        </section>
+
+      <section class="bg-white pt-4 pb-4">
+          <div class="container-fluid">
+            <div class="row row-books-from">
+              <div class="col-md-4 col-lg-3">
+                <div class="card bg-secondary text-white border-0 hover-shadow mb-3">
+                  <div class="card-body">
+                    <div class="clearfix">
+  
+                      <img style="max-width:20%" src="assets/img/books/978935.1.jpg" class="float-left" />
+  
+                      <div class="float-left pl-3" style="max-width:80%">
+  
+                        <h4 class="mb-0 text-truncate mb-2 pb-1 text-warning border-bottom border-warning"
+                          style="white-space: nowrap">From &#x20B9; 499</h4>
+                        <div class="mb-1">Mechanical Engineering Books</div>
+                        <div class="small text-light">329+ Books</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="clearfix">
-                  <button type="submit" class="btn btn-info btn-sm">Login</button>
-
-                  <button class="float-right btn btn-sm btn-danger rounded-pill shadow-sm">
-                    <i class="fab fa-google"></i>
-                  </button>
-                  <button class="float-right btn btn-sm btn-primary rounded-pill mr-1 shadow-sm">
-                    <i class="fab fa-facebook-f" style="padding:0 .2rem"></i>
-                  </button>
+              </div>
+  
+              <div class="col-md-4 col-lg-3">
+                <div class="card bg-secondary text-white border-0 hover-shadow mb-3">
+                  <div class="card-body">
+                    <div class="clearfix">
+  
+                      <img style="max-width:20%" src="assets/img/books/3423434.1.jpg" class="float-left" />
+  
+                      <div class="float-left pl-3" style="max-width:80%">
+  
+                        <h4 class="mb-0 text-truncate mb-2 pb-1 text-warning border-bottom border-warning"
+                          style="white-space: nowrap">From &#x20B9; 499</h4>
+                        <div class="mb-1">Electrical Engineering Books</div>
+                        <div class="small text-light">329+ Books</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </form>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Forgot password?</a>
+              </div>
+  
+  
+              <div class="col-md-4 col-lg-3">
+                <div class="card bg-secondary text-white border-0 hover-shadow mb-3">
+                  <div class="card-body">
+                    <div class="clearfix">
+  
+                      <img style="max-width:20%" src="assets/img/books/9781439.1.jpg" class="float-left" />
+  
+                      <div class="float-left pl-3" style="max-width:80%">
+  
+                        <h4 class="mb-0 text-truncate mb-2 pb-1 text-warning border-bottom border-warning"
+                          style="white-space: nowrap">From &#x20B9; 499</h4>
+                        <div class="mb-1">Novels</div>
+                        <div class="small text-light">329+ Books</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="col-md-4 col-lg-3 d-md-none d-lg-flex">
+                <div class="card bg-secondary text-white border-0 hover-shadow mb-3">
+                  <div class="card-body">
+                    <div class="clearfix">
+  
+                      <img style="max-width:20%" src="assets/img/books/978935.1.jpg" class="float-left" />
+  
+                      <div class="float-left pl-3" style="max-width:80%">
+  
+                        <h4 class="mb-0 text-truncate mb-2 pb-1 text-warning border-bottom border-warning"
+                          style="white-space: nowrap">From &#x20B9; 499</h4>
+                        <div class="mb-1">Computer Engineering Books</div>
+                        <div class="small text-light">329+ Books</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+  
             </div>
-          </li>
-
-        </ul>
-        <button class="btn btn-sm btn-danger shadow-sm ml-0" data-toggle="modal" data-target="#mSignUp">Sign up</button>
-      </div>
-    </div>
-  </nav>
+          </div>
+        </section>
+  
 
 
+      <section class="bg-light pt-5 pb-4">
 
-  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-
-        <img src="assets/img/slider1.jpg" class="d-block w-100" alt="...">
-
-      </div>
-      <div class="carousel-item">
-
-        <img src="assets/img/slider2.jpg" class="d-block w-100" alt="...">
-
-      </div>
-      <div class="carousel-item">
-
-        <img src="assets/img/slider3.jpg" class="d-block w-100" alt="...">
-
-      </div>
-    </div>
-
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
+        <div class="container">
+          <h4 class="mb-4 font-weight-normal">Featured Books</h4>
 
 
-  <section class="bg-light pt-5 pb-4">
+          <div class="row row-book-h">
+            <div class="col-md-6 col-lg-4">
+              <div class="card mb-4 hover-shadow border-0">
+                <div class="card-body py-2 px-2 rounded">
+                  <div class="clearfix">
 
-    <div class="container">
-      <h3 class="mb-4 font-weight-normal">Featured Books</h3>
+                    <img style="max-width:20%" src="assets/img/books/978935.1.jpg" class="float-left" />
 
+                    <div class="float-left pl-3" style="max-width:80%">
 
-      <div class="row row-book-h">
-        <div class="col-md-6 col-lg-4">
-          <div class="card mb-4 hover-shadow border-0">
-            <div class="card-body py-2 px-2 rounded">
-              <div class="clearfix">
-
-                <img style="max-width:20%" src="assets/img/books/978935.1.jpg" class="float-left" />
-
-                <div class="float-left pl-3" style="max-width:80%">
-
-                  <h6 class="mb-0 text-truncate" style="white-space: nowrap">Basic Electrical and Electronis Engg.</h6>
-                  <div class="text-muted">Engineering Books</div>
-                  <h4 class="text-warning font-weight-light mt-3">&#x20B9; 345 <strike class="small">456</strike></h4>
+                      <h6 class="mb-0 text-truncate" style="white-space: nowrap">Basic Electrical and Electronis Engg.
+                      </h6>
+                      <div class="text-muted">Engineering Books</div>
+                      <h4 class="text-warning font-weight-light mt-2 mt-md-3">&#x20B9; 345 <strike class="small d-block text-muted mt-1">456</strike>
+                      </h4>
+                    </div>
+                  </div>
                 </div>
+
+
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card mb-4 hover-shadow border-0">
+                <div class="card-body py-2 px-2 rounded">
+                  <div class="clearfix">
+
+                    <img style="max-width:20%" src="assets/img/books/9781439.1.jpg" class="float-left" />
+
+                    <div class="float-left pl-3" style="max-width:80%">
+
+                      <h6 class="mb-0 text-truncate" style="white-space: nowrap">Basic Electrical and Electronis Engg.
+                      </h6>
+                      <div class="text-muted">Engineering Books</div>
+                      <h4 class="text-warning font-weight-light mt-2 mt-md-3">&#x20B9; 345 <strike class="small d-block text-muted mt-1">456</strike>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card mb-4 hover-shadow border-0">
+                <div class="card-body py-2 px-2 rounded">
+                  <div class="clearfix">
+
+                    <img style="max-width:20%" src="assets/img/books/2312414.1.jpg" class="float-left" />
+
+                    <div class="float-left pl-3" style="max-width:80%">
+
+                      <h6 class="mb-0 text-truncate" style="white-space: nowrap">Basic Electrical and Electronis Engg.
+                      </h6>
+                      <div class="text-muted">Engineering Books</div>
+                      <h4 class="text-warning font-weight-light mt-2 mt-md-3">&#x20B9; 345 <strike class="small d-block text-muted mt-1">456</strike>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card mb-4 hover-shadow border-0">
+                <div class="card-body py-2 px-2 rounded">
+                  <div class="clearfix">
+
+                    <img style="max-width:20%" src="assets/img/books/9781439.1.jpg" class="float-left" />
+
+                    <div class="float-left pl-3" style="max-width:80%">
+
+                      <h6 class="mb-0 text-truncate" style="white-space: nowrap">Basic Electrical and Electronis Engg.
+                      </h6>
+                      <div class="text-muted">Engineering Books</div>
+                      <h4 class="text-warning font-weight-light mt-2 mt-md-3">&#x20B9; 345 <strike class="small d-block text-muted mt-1">456</strike>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card mb-4 hover-shadow border-0">
+                <div class="card-body py-2 px-2 rounded">
+                  <div class="clearfix">
+
+                    <img style="max-width:20%" src="assets/img/books/2312414.1.jpg" class="float-left" />
+
+                    <div class="float-left pl-3" style="max-width:80%">
+
+                      <h6 class="mb-0 text-truncate" style="white-space: nowrap">Basic Electrical and Electronis Engg.
+                      </h6>
+                      <div class="text-muted">Engineering Books</div>
+                      <h4 class="text-warning font-weight-light mt-2 mt-md-3">&#x20B9; 345 <strike class="small d-block text-muted mt-1">456</strike>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card mb-4 hover-shadow border-0">
+                <div class="card-body py-2 px-2 rounded">
+                  <div class="clearfix">
+
+                    <img style="max-width:20%" src="assets/img/books/3423434.1.jpg" class="float-left" />
+
+                    <div class="float-left pl-3" style="max-width:80%">
+
+                      <h6 class="mb-0 text-truncate" style="white-space: nowrap">Basic Electrical and Electronis Engg.
+                      </h6>
+                      <div class="text-muted">Engineering Books</div>
+                      <h4 class="text-warning font-weight-light mt-2 mt-md-3">&#x20B9; 345 <strike class="small d-block text-muted mt-1">456</strike>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+
+
               </div>
             </div>
 
 
           </div>
+
         </div>
 
-        <div class="col-md-6 col-lg-4">
-          <div class="card mb-4 hover-shadow border-0">
-            <div class="card-body py-2 px-2 rounded">
-              <div class="clearfix">
+      </section>
 
-                <img style="max-width:20%" src="assets/img/books/9781439.1.jpg" class="float-left" />
-
-                <div class="float-left pl-3" style="max-width:80%">
-
-                  <h6 class="mb-0 text-truncate" style="white-space: nowrap">Basic Electrical and Electronis Engg.</h6>
-                  <div class="text-muted">Engineering Books</div>
-                  <h4 class="text-warning font-weight-light mt-3">&#x20B9; 345 <strike class="small">456</strike></h4>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="card mb-4 hover-shadow border-0">
-            <div class="card-body py-2 px-2 rounded">
-              <div class="clearfix">
-
-                <img style="max-width:20%" src="assets/img/books/2312414.1.jpg" class="float-left" />
-
-                <div class="float-left pl-3" style="max-width:80%">
-
-                  <h6 class="mb-0 text-truncate" style="white-space: nowrap">Basic Electrical and Electronis Engg.</h6>
-                  <div class="text-muted">Engineering Books</div>
-                  <h4 class="text-warning font-weight-light mt-3">&#x20B9; 345 <strike class="small">456</strike></h4>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
-        </div>
-
-
-        <div class="col-md-6 col-lg-4">
-          <div class="card mb-4 hover-shadow border-0">
-            <div class="card-body py-2 px-2 rounded">
-              <div class="clearfix">
-
-                <img style="max-width:20%" src="assets/img/books/9781439.1.jpg" class="float-left" />
-
-                <div class="float-left pl-3" style="max-width:80%">
-
-                  <h6 class="mb-0 text-truncate" style="white-space: nowrap">Basic Electrical and Electronis Engg.</h6>
-                  <div class="text-muted">Engineering Books</div>
-                  <h4 class="text-warning font-weight-light mt-3">&#x20B9; 345 <strike class="small">456</strike></h4>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
-        </div>
-
-
-        <div class="col-md-6 col-lg-4">
-          <div class="card mb-4 hover-shadow border-0">
-            <div class="card-body py-2 px-2 rounded">
-              <div class="clearfix">
-
-                <img style="max-width:20%" src="assets/img/books/2312414.1.jpg" class="float-left" />
-
-                <div class="float-left pl-3" style="max-width:80%">
-
-                  <h6 class="mb-0 text-truncate" style="white-space: nowrap">Basic Electrical and Electronis Engg.</h6>
-                  <div class="text-muted">Engineering Books</div>
-                  <h4 class="text-warning font-weight-light mt-3">&#x20B9; 345 <strike class="small">456</strike></h4>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
-        </div>
-
-
-        <div class="col-md-6 col-lg-4">
-          <div class="card mb-4 hover-shadow border-0">
-            <div class="card-body py-2 px-2 rounded">
-              <div class="clearfix">
-
-                <img style="max-width:20%" src="assets/img/books/3423434.1.jpg" class="float-left" />
-
-                <div class="float-left pl-3" style="max-width:80%">
-
-                  <h6 class="mb-0 text-truncate" style="white-space: nowrap">Basic Electrical and Electronis Engg.</h6>
-                  <div class="text-muted">Engineering Books</div>
-                  <h4 class="text-warning font-weight-light mt-3">&#x20B9; 345 <strike class="small">456</strike></h4>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <section class="bg-white pt-4 pb-4">
-
-    <div class="container-fluid text-center">
-      <h3 class="font-weight-normal">Books Recomended for you</h3>
-      <div class="text-muted mt-2 pb-2 border-bottom mb-4">Similar items to what you viewed before</div>
-
-      <div class="row">
-        <div class="col-md-4 col-lg-3 col-xl-2">
-          <div class="card mb-4 hover-shadow border-0">
-            <div class="card-body py-2 px-2 rounded">
-              <div class="text-center">
-                <div class="mb-3">
-                  <img style="max-height:100px" src="assets/img/books/2312414.1.jpg" />
-                </div>
-                <div>
-
-                  <strong class="mb-0 text-truncate d-block" style="white-space: nowrap">Basic Electrical and Electronis
-                    Engg.</strong>
-                  <div class="text-muted">Engineering Books</div>
-                  <h4 class="text-warning font-weight-light mt-3">&#x20B9; 345 <strike class="small">456</strike></h4>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
-        </div>
-
-        <div class="col-md-4 col-lg-3 col-xl-2">
-          <div class="card mb-4 hover-shadow border-0">
-            <div class="card-body py-2 px-2 rounded">
-              <div class="text-center">
-                <div class="mb-3">
-                  <img style="max-height:100px" src="assets/img/books/978935.1.jpg" />
-                </div>
-                <div>
-
-                  <strong class="mb-0 text-truncate d-block" style="white-space: nowrap">Basic Electrical and Electronis
-                    Engg.</strong>
-                  <div class="text-muted">Engineering Books</div>
-                  <h4 class="text-warning font-weight-light mt-3">&#x20B9; 345 <strike class="small">456</strike></h4>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
-        </div>
-
-        <div class="col-md-4 col-lg-3 col-xl-2">
-          <div class="card mb-4 hover-shadow border-0">
-            <div class="card-body py-2 px-2 rounded">
-              <div class="text-center">
-                <div class="mb-3">
-                  <img style="max-height:100px" src="assets/img/books/2312414.1.jpg" />
-                </div>
-                <div>
-
-                  <strong class="mb-0 text-truncate d-block" style="white-space: nowrap">Basic Electrical and Electronis
-                    Engg.</strong>
-                  <div class="text-muted">Engineering Books</div>
-                  <h4 class="text-warning font-weight-light mt-3">&#x20B9; 345 <strike class="small">456</strike></h4>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
-        </div>
-
-        <div class="col-md-4 col-lg-3 col-xl-2">
-          <div class="card mb-4 hover-shadow border-0">
-            <div class="card-body py-2 px-2 rounded">
-              <div class="text-center">
-                <div class="mb-3">
-                  <img style="max-height:100px" src="assets/img/books/3423434.1.jpg" />
-                </div>
-                <div>
-
-                  <strong class="mb-0 text-truncate d-block" style="white-space: nowrap">Basic Electrical and Electronis
-                    Engg.</strong>
-                  <div class="text-muted">Engineering Books</div>
-                  <h4 class="text-warning font-weight-light mt-3">&#x20B9; 345 <strike class="small">456</strike></h4>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
-        </div>
-
-        <div class="col-md-4 col-lg-3 col-xl-2">
-          <div class="card mb-4 hover-shadow border-0">
-            <div class="card-body py-2 px-2 rounded">
-              <div class="text-center">
-                <div class="mb-3">
-                  <img style="max-height:100px" src="assets/img/books/9781439.1.jpg" />
-                </div>
-                <div>
-
-                  <strong class="mb-0 text-truncate d-block" style="white-space: nowrap">Basic Electrical and Electronis
-                    Engg.</strong>
-                  <div class="text-muted">Engineering Books</div>
-                  <h4 class="text-warning font-weight-light mt-3">&#x20B9; 345 <strike class="small">456</strike></h4>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
-        </div>
-
-        <div class="col-md-4 col-lg-3 col-xl-2">
-          <div class="card mb-4 hover-shadow border-0">
-            <div class="card-body py-2 px-2 rounded">
-              <div class="text-center">
-                <div class="mb-3">
-                  <img style="max-height:100px" src="assets/img/books/978935.1.jpg" />
-                </div>
-                <div>
-
-                  <strong class="mb-0 text-truncate d-block" style="white-space: nowrap">Basic Electrical and Electronis
-                    Engg.</strong>
-                  <div class="text-muted">Engineering Books</div>
-                  <h4 class="text-warning font-weight-light mt-3">&#x20B9; 345 <strike class="small">456</strike></h4>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <section class="bg-white pt-4 pb-4">
-    <div class="container-fluid">
-      <div class="row row-books-from">
-        <div class="col-md-4 col-lg-3">
-          <div class="card bg-secondary text-white border-0 hover-shadow mb-3">
-            <div class="card-body">
-              <div class="clearfix">
-
-                <img style="max-width:20%" src="assets/img/books/978935.1.jpg" class="float-left" />
-
-                <div class="float-left pl-3" style="max-width:80%">
-
-                  <h4 class="mb-0 text-truncate mb-2 pb-1 text-warning border-bottom border-warning"
-                    style="white-space: nowrap">From &#x20B9; 499</h4>
-                  <div class="mb-1">Mechanical Engineering Books</div>
-                  <div class="small text-light">329+ Books</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-lg-3">
-          <div class="card bg-secondary text-white border-0 hover-shadow mb-3">
-            <div class="card-body">
-              <div class="clearfix">
-
-                <img style="max-width:20%" src="assets/img/books/3423434.1.jpg" class="float-left" />
-
-                <div class="float-left pl-3" style="max-width:80%">
-
-                  <h4 class="mb-0 text-truncate mb-2 pb-1 text-warning border-bottom border-warning"
-                    style="white-space: nowrap">From &#x20B9; 499</h4>
-                  <div class="mb-1">Electrical Engineering Books</div>
-                  <div class="small text-light">329+ Books</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-md-4 col-lg-3">
-          <div class="card bg-secondary text-white border-0 hover-shadow mb-3">
-            <div class="card-body">
-              <div class="clearfix">
-
-                <img style="max-width:20%" src="assets/img/books/9781439.1.jpg" class="float-left" />
-
-                <div class="float-left pl-3" style="max-width:80%">
-
-                  <h4 class="mb-0 text-truncate mb-2 pb-1 text-warning border-bottom border-warning"
-                    style="white-space: nowrap">From &#x20B9; 499</h4>
-                  <div class="mb-1">Novels</div>
-                  <div class="small text-light">329+ Books</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-lg-3 d-md-none d-lg-flex">
-          <div class="card bg-secondary text-white border-0 hover-shadow mb-3">
-            <div class="card-body">
-              <div class="clearfix">
-
-                <img style="max-width:20%" src="assets/img/books/978935.1.jpg" class="float-left" />
-
-                <div class="float-left pl-3" style="max-width:80%">
-
-                  <h4 class="mb-0 text-truncate mb-2 pb-1 text-warning border-bottom border-warning"
-                    style="white-space: nowrap">From &#x20B9; 499</h4>
-                  <div class="mb-1">Computer Engineering Books</div>
-                  <div class="small text-light">329+ Books</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-    </div>
-  </section>
-
-  <footer class="bg-white pt-4">
-      <div class="container">
-        <div class="row mb-3">
  
-  
-          <div class="col-sm-2">
-            <strong class="d-block mb-2">
-              Company
-            </strong>
-  
-            <ul class="list-unstyled">
-              <li>
-                <a href="#">About Us</a>
-              </li>
-              <li>
-                <a href="#">Careers</a>
-              </li>
-              <li>
-                <a href="#">Blog</a>
-              </li>
-              <li>
-                <a href="#">Investors</a>
-              </li>
-              <li>
-                <a href="#">Customer Stories</a>
-              </li>
-  
-            </ul>
-          </div>
-  
-          <div class="col-sm-2">
-            <strong class="d-block mb-2">
-              Help
-            </strong>
-  
-            <ul class="list-unstyled">
-              <li>
-                <a href="#">Payment</a>
-              </li>
-              <li>
-                <a href="#">Shipping</a>
-              </li>
-              <li>
-                <a href="#">Cancellation & Returns</a>
-              </li>
-              <li>
-                <a href="#">FAQ</a>
-              </li>
-            </ul>
-          </div>
-  
-          <div class="col-sm-2">
-            <strong class="d-block mb-2">
-              Policy
-            </strong>
-  
-            <ul class="list-unstyled">
-              <li>
-                <a href="#">Return Policy</a>
-              </li>
-              <li>
-                <a href="#">Terms of use</a>
-              </li>
-              <li>
-                <a href="#">Security</a>
-              </li>
-              <li>
-                <a href="#">Privacy</a>
-              </li>
-              <li>
-                <a href="#">Sitemap</a>
-              </li>
-              <li>
-                <a href="#">EPR Complaince</a>
-              </li>
-            </ul>
-          </div>
+      <footer class="bg-white pt-md-4">
+        <div class="container d-none d-md-block">
+          <div class="row mb-3">
 
-          <div class="col-sm-6 text-right">
+
+            <div class="col-sm-2">
+              <strong class="d-block mb-2">
+                Company
+              </strong>
+
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#">About Us</a>
+                </li>
+                <li>
+                  <a href="#">Careers</a>
+                </li>
+                <li>
+                  <a href="#">Blog</a>
+                </li>
+                <li>
+                  <a href="#">Investors</a>
+                </li>
+                <li>
+                  <a href="#">Customer Stories</a>
+                </li>
+
+              </ul>
+            </div>
+
+            <div class="col-sm-2">
+              <strong class="d-block mb-2">
+                Help
+              </strong>
+
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#">Payment</a>
+                </li>
+                <li>
+                  <a href="#">Shipping</a>
+                </li>
+                <li>
+                  <a href="#">Cancellation & Returns</a>
+                </li>
+                <li>
+                  <a href="#">FAQ</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-sm-2">
+              <strong class="d-block mb-2">
+                Policy
+              </strong>
+
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#">Return Policy</a>
+                </li>
+                <li>
+                  <a href="#">Terms of use</a>
+                </li>
+                <li>
+                  <a href="#">Security</a>
+                </li>
+                <li>
+                  <a href="#">Privacy</a>
+                </li>
+                <li>
+                  <a href="#">Sitemap</a>
+                </li>
+                <li>
+                  <a href="#">EPR Complaince</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-sm-6 text-right">
 
               <div class="mt-3">
                 <a class="social-link-fb" href="#">
@@ -604,175 +709,211 @@
                 <a class="social-link-tw" href="#">
                   <i class="fab fa-twitter"></i>
                 </a>
-             
+
               </div>
             </div>
 
+          </div>
+
+
         </div>
-  
-  
-      </div>
-  
-      <div class="bg-dark py-2">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 text-white">
-              © Copyright 2019 BookMArt. All rights reserved. <br />
-              Various trademarks and logos held by their respective owners.
-            </div>
-            <div class="col-sm-6 d-flex align-items-center justify-content-end">
-              <a href="#" class="mr-2 align-middle">Privacy Policy</a>
-              <a href="#" class="align-middle">Terms of Use</a>
+
+        <div class="bg-dark py-2">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 text-white text-center text-md-left">
+                © Copyright 2019 Bookpark. All rights reserved. 
+                <span class="d-none d-md-block">
+                    <br />
+                Various trademarks and logos held by their respective owners.
+                </span>
+              </div>
+              <div class="col-sm-6 align-items-center justify-content-end d-none d-md-flex">
+                <a href="#" class="mr-2 align-middle">Privacy Policy</a>
+                <a href="#" class="align-middle">Terms of Use</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
 
 
-  <div class="modal fade" id="mSignUp" data-backdrop="static">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content shadow-lg overflow-hidden border-0">
-        <div class="modal-header px-4 d-none">
-          <div class="clearfix w-100">
+      <div class="modal fade" id="mSignUp" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content shadow-lg overflow-hidden border-0">
+            <div class="modal-header px-4 d-none">
+              <div class="clearfix w-100">
 
-            <h4 class="mb-0 font-weight-regular">Sign Up
+                <h4 class="mb-0 font-weight-regular">Sign Up
 
-            </h4>
-            <div class="d-block text-muted">Join us to get the most out of Uplasta</div>
-          </div>
-        </div>
-        <div class="modal-body p-0">
-
-          <div class="row mx-0">
-            <div class="col-md-7 py-4 text-white"
-              style="background: linear-gradient(-130deg, #007bff 25%, #17a2b8  100%);">
-
-              <button class="btn btn-sm btn-primary rounded-pill float-right" data-dismiss="modal">
-                <i class="fas fa-times"></i>
-              </button>
-              <h4 class="mb-0 font-weight-regular text-center">Sign Up
-
-              </h4>
-              <div class="d-block text-light text-center">Sign up to get the most out of Bookmart</div>
-
-
-
+                </h4>
+                <div class="d-block text-muted">Join us to get the most out of Uplasta</div>
+              </div>
             </div>
+            <div class="modal-body p-0">
 
-            <div class="col-md-5 py-4 d-flex flex-column justify-content-center">
-              <form class="pb-3" id="divPhone">
-                <div class="form-group">
-                  <h6 class="text-info text-center mb-4">Mobile Number</h6>
-                  <div class="" id="flagPicker">
+              <div class="row mx-0">
+                <div class="col-md-7 py-4 text-white"
+                  style="background: linear-gradient(-130deg, #007bff 25%, #17a2b8  100%);">
 
-                  </div>
-                  <small class="text-muted">We’ll send a 6 digit OTP to verify your phone number</small>
+                  <button class="btn btn-sm btn-primary rounded-pill float-right" data-dismiss="modal">
+                    <i class="fas fa-times"></i>
+                  </button>
+                  <h4 class="mb-0 font-weight-regular text-center">Sign Up
+
+                  </h4>
+                  <div class="d-block text-light text-center">Sign up to get the most out of Bookmart</div>
+
+
 
                 </div>
-                <button class="btn btn-info btn-block shadow" id="btnGetOtp" onclick="showOtp(event)">Get OTP</button>
 
-                <!-- 
+                <div class="col-md-5 py-4 d-flex flex-column justify-content-center">
+                  <form class="pb-3" id="divPhone">
                     <div class="form-group">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck2">
-                        <label class="custom-control-label" for="customCheck2">I have read the <a href="#">Pivacy policy</a> and
-                          <a href="#">Terms of service</a>.</label>
+                      <h6 class="text-info text-center mb-4">Mobile Number</h6>
+                      <div class="" id="flagPicker">
+
                       </div>
-                    </div> -->
+                      <small class="text-muted">We’ll send a 6 digit OTP to verify your phone number</small>
 
-              </form>
+                    </div>
+                    <button class="btn btn-info btn-block shadow" id="btnGetOtp" onclick="showOtp(event)">Get
+                      OTP</button>
 
-              <form class="pb-3" id="divOtp" style="display: none;">
+                    <!-- 
+                                  <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                      <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                      <label class="custom-control-label" for="customCheck2">I have read the <a href="#">Pivacy policy</a> and
+                                        <a href="#">Terms of service</a>.</label>
+                                    </div>
+                                  </div> -->
 
-                <div class="form-group text-center">
-                  <h6 class="text-info mb-0">Enter OTP</h6>
-                  <small class="text-muted d-block mt-1 mb-4">OTP sent to +91 9482746289 (<a href="#"
-                      onclick="showPhone(event)">wrong
-                      number?</a>)</small>
-                  <input class="form-control text-center form-control-lg">
-                </div>
+                  </form>
 
-                <div class="my-3 text-center">
-                  <a href="#">Resend OTP</a>
-                </div>
+                  <form class="pb-3" id="divOtp" style="display: none;">
 
-                <div class="">
-                  <button class="btn btn-info btn-block shadow">Submit</button>
-                </div>
-                <!-- 
-                      <div class="form-group">
-                        <div class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input" id="customCheck2">
-                          <label class="custom-control-label" for="customCheck2">I have read the <a href="#">Pivacy policy</a> and
-                            <a href="#">Terms of service</a>.</label>
-                        </div>
-                      </div> -->
+                    <div class="form-group text-center">
+                      <h6 class="text-info mb-0">Enter OTP</h6>
+                      <small class="text-muted d-block mt-1 mb-4">OTP sent to +91 9482746289 (<a href="#"
+                          onclick="showPhone(event)">wrong
+                          number?</a>)</small>
+                      <input class="form-control text-center form-control-lg">
+                    </div>
 
+                    <div class="my-3 text-center">
+                      <a href="#">Resend OTP</a>
+                    </div>
 
-
-              </form>
-
-
-              <form class="pb-3" id="divEmail" style="display: none;">
-                <div class="form-group">
-                  <label for="exampleDropdownFormEmail1">Email address</label>
-                  <input type="email" class="form-control form-control-sm" placeholder="email@example.com">
-                </div>
-                <div class="form-group">
-                  <label for="exampleDropdownFormPassword1">Password</label>
-                  <input type="password" class="form-control form-control-sm" placeholder="Password">
-                </div>
-
-                <div class="mt-4">
-                  <button type="submit" class="btn btn-info btn-block shadow">Sign Up</button>
+                    <div class="">
+                      <button class="btn btn-info btn-block shadow">Submit</button>
+                    </div>
+                    <!-- 
+                                    <div class="form-group">
+                                      <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                        <label class="custom-control-label" for="customCheck2">I have read the <a href="#">Pivacy policy</a> and
+                                          <a href="#">Terms of service</a>.</label>
+                                      </div>
+                                    </div> -->
 
 
-                </div>
 
-              </form>
+                  </form>
 
-              <div class="section-or border-top mt-4 pt-4 text-center">
-                <div class="text-center mt-3">
-                  <button class="btn btn-lg btn-light border rounded-circle p-0 shadow-sm"
-                    style="height:50px;width:50px;">
-                    <img class="m-auto" style="vertical-align: text-bottom"
-                      src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQ4LjIgKDQ3MzI3KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5nb29nbGU8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz4KICAgICAgICA8cGF0aCBkPSJNMTkuNzY3NDQxOSw4LjE4MTgxODE4IEwxMC4yMzI1NTgxLDguMTgxODE4MTggTDEwLjIzMjU1ODEsMTIuMDQ1NDU0NSBMMTUuNzIwOTMwMiwxMi4wNDU0NTQ1IEMxNS4yMDkzMDIzLDE0LjUgMTMuMDY5NzY3NCwxNS45MDkwOTA5IDEwLjIzMjU1ODEsMTUuOTA5MDkwOSBDNi44ODM3MjA5MywxNS45MDkwOTA5IDQuMTg2MDQ2NTEsMTMuMjcyNzI3MyA0LjE4NjA0NjUxLDEwIEM0LjE4NjA0NjUxLDYuNzI3MjcyNzMgNi44ODM3MjA5Myw0LjA5MDkwOTA5IDEwLjIzMjU1ODEsNC4wOTA5MDkwOSBDMTEuNjc0NDE4Niw0LjA5MDkwOTA5IDEyLjk3Njc0NDIsNC41OTA5MDkwOSAxNCw1LjQwOTA5MDkxIEwxNi45NzY3NDQyLDIuNSBDMTUuMTYyNzkwNywwLjk1NDU0NTQ1NSAxMi44MzcyMDkzLDAgMTAuMjMyNTU4MSwwIEM0LjU1ODEzOTUzLDAgMCw0LjQ1NDU0NTQ1IDAsMTAgQzAsMTUuNTQ1NDU0NSA0LjU1ODEzOTUzLDIwIDEwLjIzMjU1ODEsMjAgQzE1LjM0ODgzNzIsMjAgMjAsMTYuMzYzNjM2NCAyMCwxMCBDMjAsOS40MDkwOTA5MSAxOS45MDY5NzY3LDguNzcyNzI3MjcgMTkuNzY3NDQxOSw4LjE4MTgxODE4IFoiIGlkPSJwYXRoLTEiPjwvcGF0aD4KICAgICAgICA8cGF0aCBkPSJNMTkuNzY3NDQxOSw4LjE4MTgxODE4IEwxMC4yMzI1NTgxLDguMTgxODE4MTggTDEwLjIzMjU1ODEsMTIuMDQ1NDU0NSBMMTUuNzIwOTMwMiwxMi4wNDU0NTQ1IEMxNS4yMDkzMDIzLDE0LjUgMTMuMDY5NzY3NCwxNS45MDkwOTA5IDEwLjIzMjU1ODEsMTUuOTA5MDkwOSBDNi44ODM3MjA5MywxNS45MDkwOTA5IDQuMTg2MDQ2NTEsMTMuMjcyNzI3MyA0LjE4NjA0NjUxLDEwIEM0LjE4NjA0NjUxLDYuNzI3MjcyNzMgNi44ODM3MjA5Myw0LjA5MDkwOTA5IDEwLjIzMjU1ODEsNC4wOTA5MDkwOSBDMTEuNjc0NDE4Niw0LjA5MDkwOTA5IDEyLjk3Njc0NDIsNC41OTA5MDkwOSAxNCw1LjQwOTA5MDkxIEwxNi45NzY3NDQyLDIuNSBDMTUuMTYyNzkwNywwLjk1NDU0NTQ1NSAxMi44MzcyMDkzLDAgMTAuMjMyNTU4MSwwIEM0LjU1ODEzOTUzLDAgMCw0LjQ1NDU0NTQ1IDAsMTAgQzAsMTUuNTQ1NDU0NSA0LjU1ODEzOTUzLDIwIDEwLjIzMjU1ODEsMjAgQzE1LjM0ODgzNzIsMjAgMjAsMTYuMzYzNjM2NCAyMCwxMCBDMjAsOS40MDkwOTA5MSAxOS45MDY5NzY3LDguNzcyNzI3MjcgMTkuNzY3NDQxOSw4LjE4MTgxODE4IFoiIGlkPSJwYXRoLTMiPjwvcGF0aD4KICAgICAgICA8cGF0aCBkPSJNMTkuNzY3NDQxOSw4LjE4MTgxODE4IEwxMC4yMzI1NTgxLDguMTgxODE4MTggTDEwLjIzMjU1ODEsMTIuMDQ1NDU0NSBMMTUuNzIwOTMwMiwxMi4wNDU0NTQ1IEMxNS4yMDkzMDIzLDE0LjUgMTMuMDY5NzY3NCwxNS45MDkwOTA5IDEwLjIzMjU1ODEsMTUuOTA5MDkwOSBDNi44ODM3MjA5MywxNS45MDkwOTA5IDQuMTg2MDQ2NTEsMTMuMjcyNzI3MyA0LjE4NjA0NjUxLDEwIEM0LjE4NjA0NjUxLDYuNzI3MjcyNzMgNi44ODM3MjA5Myw0LjA5MDkwOTA5IDEwLjIzMjU1ODEsNC4wOTA5MDkwOSBDMTEuNjc0NDE4Niw0LjA5MDkwOTA5IDEyLjk3Njc0NDIsNC41OTA5MDkwOSAxNCw1LjQwOTA5MDkxIEwxNi45NzY3NDQyLDIuNSBDMTUuMTYyNzkwNywwLjk1NDU0NTQ1NSAxMi44MzcyMDkzLDAgMTAuMjMyNTU4MSwwIEM0LjU1ODEzOTUzLDAgMCw0LjQ1NDU0NTQ1IDAsMTAgQzAsMTUuNTQ1NDU0NSA0LjU1ODEzOTUzLDIwIDEwLjIzMjU1ODEsMjAgQzE1LjM0ODgzNzIsMjAgMjAsMTYuMzYzNjM2NCAyMCwxMCBDMjAsOS40MDkwOTA5MSAxOS45MDY5NzY3LDguNzcyNzI3MjcgMTkuNzY3NDQxOSw4LjE4MTgxODE4IFoiIGlkPSJwYXRoLTUiPjwvcGF0aD4KICAgICAgICA8cGF0aCBkPSJNMTkuNzY3NDQxOSw4LjE4MTgxODE4IEwxMC4yMzI1NTgxLDguMTgxODE4MTggTDEwLjIzMjU1ODEsMTIuMDQ1NDU0NSBMMTUuNzIwOTMwMiwxMi4wNDU0NTQ1IEMxNS4yMDkzMDIzLDE0LjUgMTMuMDY5NzY3NCwxNS45MDkwOTA5IDEwLjIzMjU1ODEsMTUuOTA5MDkwOSBDNi44ODM3MjA5MywxNS45MDkwOTA5IDQuMTg2MDQ2NTEsMTMuMjcyNzI3MyA0LjE4NjA0NjUxLDEwIEM0LjE4NjA0NjUxLDYuNzI3MjcyNzMgNi44ODM3MjA5Myw0LjA5MDkwOTA5IDEwLjIzMjU1ODEsNC4wOTA5MDkwOSBDMTEuNjc0NDE4Niw0LjA5MDkwOTA5IDEyLjk3Njc0NDIsNC41OTA5MDkwOSAxNCw1LjQwOTA5MDkxIEwxNi45NzY3NDQyLDIuNSBDMTUuMTYyNzkwNywwLjk1NDU0NTQ1NSAxMi44MzcyMDkzLDAgMTAuMjMyNTU4MSwwIEM0LjU1ODEzOTUzLDAgMCw0LjQ1NDU0NTQ1IDAsMTAgQzAsMTUuNTQ1NDU0NSA0LjU1ODEzOTUzLDIwIDEwLjIzMjU1ODEsMjAgQzE1LjM0ODgzNzIsMjAgMjAsMTYuMzYzNjM2NCAyMCwxMCBDMjAsOS40MDkwOTA5MSAxOS45MDY5NzY3LDguNzcyNzI3MjcgMTkuNzY3NDQxOSw4LjE4MTgxODE4IFoiIGlkPSJwYXRoLTciPjwvcGF0aD4KICAgIDwvZGVmcz4KICAgIDxnIGlkPSIxLjEtU2lnbnVwL0xvZ2luIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iZ29vZ2xlIj4KICAgICAgICAgICAgPGcgaWQ9IkNsaXBwZWQiPgogICAgICAgICAgICAgICAgPG1hc2sgaWQ9Im1hc2stMiIgZmlsbD0id2hpdGUiPgogICAgICAgICAgICAgICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI3BhdGgtMSI+PC91c2U+CiAgICAgICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgICAgICA8ZyBpZD0iYSI+PC9nPgogICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlNoYXBlIiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iIG1hc2s9InVybCgjbWFzay0yKSIgcG9pbnRzPSItMC45MzAyMzI1NTggMTUuOTA5MDkwOSAtMC45MzAyMzI1NTggNC4wOTA5MDkwOSA2Ljk3Njc0NDE5IDEwIj48L3BvbHlnb24+CiAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPGcgaWQ9IkNsaXBwZWQiPgogICAgICAgICAgICAgICAgPG1hc2sgaWQ9Im1hc2stNCIgZmlsbD0id2hpdGUiPgogICAgICAgICAgICAgICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI3BhdGgtMyI+PC91c2U+CiAgICAgICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgICAgICA8ZyBpZD0iYSI+PC9nPgogICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlNoYXBlIiBmaWxsPSIjRUE0MzM1IiBmaWxsLXJ1bGU9Im5vbnplcm8iIG1hc2s9InVybCgjbWFzay00KSIgcG9pbnRzPSItMC45MzAyMzI1NTggNC4wOTA5MDkwOSA2Ljk3Njc0NDE5IDEwIDEwLjIzMjU1ODEgNy4yMjcyNzI3MyAyMS4zOTUzNDg4IDUuNDU0NTQ1NDUgMjEuMzk1MzQ4OCAtMC45MDkwOTA5MDkgLTAuOTMwMjMyNTU4IC0wLjkwOTA5MDkwOSI+PC9wb2x5Z29uPgogICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDxnIGlkPSJDbGlwcGVkIj4KICAgICAgICAgICAgICAgIDxtYXNrIGlkPSJtYXNrLTYiIGZpbGw9IndoaXRlIj4KICAgICAgICAgICAgICAgICAgICA8dXNlIHhsaW5rOmhyZWY9IiNwYXRoLTUiPjwvdXNlPgogICAgICAgICAgICAgICAgPC9tYXNrPgogICAgICAgICAgICAgICAgPGcgaWQ9ImEiPjwvZz4KICAgICAgICAgICAgICAgIDxwb2x5Z29uIGlkPSJTaGFwZSIgZmlsbD0iIzM0QTg1MyIgZmlsbC1ydWxlPSJub256ZXJvIiBtYXNrPSJ1cmwoI21hc2stNikiIHBvaW50cz0iLTAuOTMwMjMyNTU4IDE1LjkwOTA5MDkgMTMuMDIzMjU1OCA1LjQ1NDU0NTQ1IDE2LjY5NzY3NDQgNS45MDkwOTA5MSAyMS4zOTUzNDg4IC0wLjkwOTA5MDkwOSAyMS4zOTUzNDg4IDIwLjkwOTA5MDkgLTAuOTMwMjMyNTU4IDIwLjkwOTA5MDkiPjwvcG9seWdvbj4KICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8ZyBpZD0iQ2xpcHBlZCI+CiAgICAgICAgICAgICAgICA8bWFzayBpZD0ibWFzay04IiBmaWxsPSJ3aGl0ZSI+CiAgICAgICAgICAgICAgICAgICAgPHVzZSB4bGluazpocmVmPSIjcGF0aC03Ij48L3VzZT4KICAgICAgICAgICAgICAgIDwvbWFzaz4KICAgICAgICAgICAgICAgIDxnIGlkPSJhIj48L2c+CiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iU2hhcGUiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIgbWFzaz0idXJsKCNtYXNrLTgpIiBwb2ludHM9IjIxLjM5NTM0ODggMjAuOTA5MDkwOSA2Ljk3Njc0NDE5IDEwIDUuMTE2Mjc5MDcgOC42MzYzNjM2NCAyMS4zOTUzNDg4IDQuMDkwOTA5MDkiPjwvcG9seWdvbj4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+">
-                  </button>
 
-                  <button class="btn btn-lg btn-primary border rounded-circle p-0 shadow-sm ml-3"
-                    style="height:50px;width:50px;background-color:#4267b2">
-                    <img class="m-auto" style="vertical-align: text-bottom"
-                      src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTFweCIgaGVpZ2h0PSIxOXB4IiB2aWV3Qm94PSIwIDAgMTEgMTkiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQ4LjIgKDQ3MzI3KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5Hcm91cDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJHcm91cCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUuMDAwMDAwLCAtMS4wMDAwMDApIj4KICAgICAgICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZSIgZmlsbD0iI0Q4RDhEOCIgb3BhY2l0eT0iMCIgeD0iMCIgeT0iMCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIj48L3JlY3Q+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMS42MzUxNTA5LDE5Ljk5OTU4ODkgTDExLjYzNTE1MDksMTEuNTAxMDM0OSBMMTQuNjQ4OTUzLDExLjUwMTAzNDkgTDE1LjEwMDIyNzEsOC4wNjg1NTQxMSBMMTEuNjM1MTUwOSw4LjA2ODU1NDExIEwxMS42MzUxNTA5LDUuODc3MTMyMDEgQzExLjYzNTE1MDksNC44ODMzNDk2MyAxMS45MTY0Nzc0LDQuMjA2MTE5NzEgMTMuMzY5MjYzNCw0LjIwNjExOTcxIEwxNS4yMjIyMjIyLDQuMjA1MzI1NDcgTDE1LjIyMjIyMjIsMS4xMzUyODcxMyBDMTQuOTAxNzYsMS4wOTM0NTY2NyAxMy44MDE4MjQ0LDEgMTIuNTIyMTM0OCwxIEM5Ljg1MDU2Njg5LDEgOC4wMjE1MzkyNiwyLjU5OTYxODExIDguMDIxNTM5MjYsNS41MzcxOTMzMSBMOC4wMjE1MzkyNiw4LjA2ODU1NDExIEw1LDguMDY4NTU0MTEgTDUsMTEuNTAxMDM0OSBMOC4wMjE1MzkyNiwxMS41MDEwMzQ5IEw4LjAyMTUzOTI2LDE5Ljk5OTU4ODkgTDExLjYzNTE1MDksMTkuOTk5NTg4OSBaIiBpZD0iZiIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=">
-                  </button>
-                </div>
+                  <form class="pb-3" id="divEmail" style="display: none;">
+                    <div class="form-group">
+                      <label for="exampleDropdownFormEmail1">Email address</label>
+                      <input type="email" class="form-control form-control-sm" placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleDropdownFormPassword1">Password</label>
+                      <input type="password" class="form-control form-control-sm" placeholder="Password">
+                    </div>
 
-                <div class="my-3">
-                  <a href="#" id="lnkEmail" onclick="showEmail(event)">Signup with email</a>
-                  <a href="#" id="lnkMobile" style="display: none;" onclick="showPhone(event)">Signup with mobile
-                    number</a>
-                </div>
+                    <div class="mt-4">
+                      <button type="submit" class="btn btn-info btn-block shadow">Sign Up</button>
 
-                <div class="small d-block text-muted">
-                  By signing in, you confirm that you have read and agree to our
-                  <a href="#">Terms &amp; Conditions</a> and
-                  <a href="#">Privacy Policy</a>
+
+                    </div>
+
+                  </form>
+
+                  <div class="section-or border-top mt-4 pt-4 text-center">
+                    <div class="text-center mt-3">
+                      <button class="btn btn-lg btn-light border rounded-circle p-0 shadow-sm"
+                        style="height:50px;width:50px;">
+                        <img class="m-auto" style="vertical-align: text-bottom"
+                          src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQ4LjIgKDQ3MzI3KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5nb29nbGU8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz4KICAgICAgICA8cGF0aCBkPSJNMTkuNzY3NDQxOSw4LjE4MTgxODE4IEwxMC4yMzI1NTgxLDguMTgxODE4MTggTDEwLjIzMjU1ODEsMTIuMDQ1NDU0NSBMMTUuNzIwOTMwMiwxMi4wNDU0NTQ1IEMxNS4yMDkzMDIzLDE0LjUgMTMuMDY5NzY3NCwxNS45MDkwOTA5IDEwLjIzMjU1ODEsMTUuOTA5MDkwOSBDNi44ODM3MjA5MywxNS45MDkwOTA5IDQuMTg2MDQ2NTEsMTMuMjcyNzI3MyA0LjE4NjA0NjUxLDEwIEM0LjE4NjA0NjUxLDYuNzI3MjcyNzMgNi44ODM3MjA5Myw0LjA5MDkwOTA5IDEwLjIzMjU1ODEsNC4wOTA5MDkwOSBDMTEuNjc0NDE4Niw0LjA5MDkwOTA5IDEyLjk3Njc0NDIsNC41OTA5MDkwOSAxNCw1LjQwOTA5MDkxIEwxNi45NzY3NDQyLDIuNSBDMTUuMTYyNzkwNywwLjk1NDU0NTQ1NSAxMi44MzcyMDkzLDAgMTAuMjMyNTU4MSwwIEM0LjU1ODEzOTUzLDAgMCw0LjQ1NDU0NTQ1IDAsMTAgQzAsMTUuNTQ1NDU0NSA0LjU1ODEzOTUzLDIwIDEwLjIzMjU1ODEsMjAgQzE1LjM0ODgzNzIsMjAgMjAsMTYuMzYzNjM2NCAyMCwxMCBDMjAsOS40MDkwOTA5MSAxOS45MDY5NzY3LDguNzcyNzI3MjcgMTkuNzY3NDQxOSw4LjE4MTgxODE4IFoiIGlkPSJwYXRoLTEiPjwvcGF0aD4KICAgICAgICA8cGF0aCBkPSJNMTkuNzY3NDQxOSw4LjE4MTgxODE4IEwxMC4yMzI1NTgxLDguMTgxODE4MTggTDEwLjIzMjU1ODEsMTIuMDQ1NDU0NSBMMTUuNzIwOTMwMiwxMi4wNDU0NTQ1IEMxNS4yMDkzMDIzLDE0LjUgMTMuMDY5NzY3NCwxNS45MDkwOTA5IDEwLjIzMjU1ODEsMTUuOTA5MDkwOSBDNi44ODM3MjA5MywxNS45MDkwOTA5IDQuMTg2MDQ2NTEsMTMuMjcyNzI3MyA0LjE4NjA0NjUxLDEwIEM0LjE4NjA0NjUxLDYuNzI3MjcyNzMgNi44ODM3MjA5Myw0LjA5MDkwOTA5IDEwLjIzMjU1ODEsNC4wOTA5MDkwOSBDMTEuNjc0NDE4Niw0LjA5MDkwOTA5IDEyLjk3Njc0NDIsNC41OTA5MDkwOSAxNCw1LjQwOTA5MDkxIEwxNi45NzY3NDQyLDIuNSBDMTUuMTYyNzkwNywwLjk1NDU0NTQ1NSAxMi44MzcyMDkzLDAgMTAuMjMyNTU4MSwwIEM0LjU1ODEzOTUzLDAgMCw0LjQ1NDU0NTQ1IDAsMTAgQzAsMTUuNTQ1NDU0NSA0LjU1ODEzOTUzLDIwIDEwLjIzMjU1ODEsMjAgQzE1LjM0ODgzNzIsMjAgMjAsMTYuMzYzNjM2NCAyMCwxMCBDMjAsOS40MDkwOTA5MSAxOS45MDY5NzY3LDguNzcyNzI3MjcgMTkuNzY3NDQxOSw4LjE4MTgxODE4IFoiIGlkPSJwYXRoLTMiPjwvcGF0aD4KICAgICAgICA8cGF0aCBkPSJNMTkuNzY3NDQxOSw4LjE4MTgxODE4IEwxMC4yMzI1NTgxLDguMTgxODE4MTggTDEwLjIzMjU1ODEsMTIuMDQ1NDU0NSBMMTUuNzIwOTMwMiwxMi4wNDU0NTQ1IEMxNS4yMDkzMDIzLDE0LjUgMTMuMDY5NzY3NCwxNS45MDkwOTA5IDEwLjIzMjU1ODEsMTUuOTA5MDkwOSBDNi44ODM3MjA5MywxNS45MDkwOTA5IDQuMTg2MDQ2NTEsMTMuMjcyNzI3MyA0LjE4NjA0NjUxLDEwIEM0LjE4NjA0NjUxLDYuNzI3MjcyNzMgNi44ODM3MjA5Myw0LjA5MDkwOTA5IDEwLjIzMjU1ODEsNC4wOTA5MDkwOSBDMTEuNjc0NDE4Niw0LjA5MDkwOTA5IDEyLjk3Njc0NDIsNC41OTA5MDkwOSAxNCw1LjQwOTA5MDkxIEwxNi45NzY3NDQyLDIuNSBDMTUuMTYyNzkwNywwLjk1NDU0NTQ1NSAxMi44MzcyMDkzLDAgMTAuMjMyNTU4MSwwIEM0LjU1ODEzOTUzLDAgMCw0LjQ1NDU0NTQ1IDAsMTAgQzAsMTUuNTQ1NDU0NSA0LjU1ODEzOTUzLDIwIDEwLjIzMjU1ODEsMjAgQzE1LjM0ODgzNzIsMjAgMjAsMTYuMzYzNjM2NCAyMCwxMCBDMjAsOS40MDkwOTA5MSAxOS45MDY5NzY3LDguNzcyNzI3MjcgMTkuNzY3NDQxOSw4LjE4MTgxODE4IFoiIGlkPSJwYXRoLTUiPjwvcGF0aD4KICAgICAgICA8cGF0aCBkPSJNMTkuNzY3NDQxOSw4LjE4MTgxODE4IEwxMC4yMzI1NTgxLDguMTgxODE4MTggTDEwLjIzMjU1ODEsMTIuMDQ1NDU0NSBMMTUuNzIwOTMwMiwxMi4wNDU0NTQ1IEMxNS4yMDkzMDIzLDE0LjUgMTMuMDY5NzY3NCwxNS45MDkwOTA5IDEwLjIzMjU1ODEsMTUuOTA5MDkwOSBDNi44ODM3MjA5MywxNS45MDkwOTA5IDQuMTg2MDQ2NTEsMTMuMjcyNzI3MyA0LjE4NjA0NjUxLDEwIEM0LjE4NjA0NjUxLDYuNzI3MjcyNzMgNi44ODM3MjA5Myw0LjA5MDkwOTA5IDEwLjIzMjU1ODEsNC4wOTA5MDkwOSBDMTEuNjc0NDE4Niw0LjA5MDkwOTA5IDEyLjk3Njc0NDIsNC41OTA5MDkwOSAxNCw1LjQwOTA5MDkxIEwxNi45NzY3NDQyLDIuNSBDMTUuMTYyNzkwNywwLjk1NDU0NTQ1NSAxMi44MzcyMDkzLDAgMTAuMjMyNTU4MSwwIEM0LjU1ODEzOTUzLDAgMCw0LjQ1NDU0NTQ1IDAsMTAgQzAsMTUuNTQ1NDU0NSA0LjU1ODEzOTUzLDIwIDEwLjIzMjU1ODEsMjAgQzE1LjM0ODgzNzIsMjAgMjAsMTYuMzYzNjM2NCAyMCwxMCBDMjAsOS40MDkwOTA5MSAxOS45MDY5NzY3LDguNzcyNzI3MjcgMTkuNzY3NDQxOSw4LjE4MTgxODE4IFoiIGlkPSJwYXRoLTciPjwvcGF0aD4KICAgIDwvZGVmcz4KICAgIDxnIGlkPSIxLjEtU2lnbnVwL0xvZ2luIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iZ29vZ2xlIj4KICAgICAgICAgICAgPGcgaWQ9IkNsaXBwZWQiPgogICAgICAgICAgICAgICAgPG1hc2sgaWQ9Im1hc2stMiIgZmlsbD0id2hpdGUiPgogICAgICAgICAgICAgICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI3BhdGgtMSI+PC91c2U+CiAgICAgICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgICAgICA8ZyBpZD0iYSI+PC9nPgogICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlNoYXBlIiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iIG1hc2s9InVybCgjbWFzay0yKSIgcG9pbnRzPSItMC45MzAyMzI1NTggMTUuOTA5MDkwOSAtMC45MzAyMzI1NTggNC4wOTA5MDkwOSA2Ljk3Njc0NDE5IDEwIj48L3BvbHlnb24+CiAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPGcgaWQ9IkNsaXBwZWQiPgogICAgICAgICAgICAgICAgPG1hc2sgaWQ9Im1hc2stNCIgZmlsbD0id2hpdGUiPgogICAgICAgICAgICAgICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI3BhdGgtMyI+PC91c2U+CiAgICAgICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgICAgICA8ZyBpZD0iYSI+PC9nPgogICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlNoYXBlIiBmaWxsPSIjRUE0MzM1IiBmaWxsLXJ1bGU9Im5vbnplcm8iIG1hc2s9InVybCgjbWFzay00KSIgcG9pbnRzPSItMC45MzAyMzI1NTggNC4wOTA5MDkwOSA2Ljk3Njc0NDE5IDEwIDEwLjIzMjU1ODEgNy4yMjcyNzI3MyAyMS4zOTUzNDg4IDUuNDU0NTQ1NDUgMjEuMzk1MzQ4OCAtMC45MDkwOTA5MDkgLTAuOTMwMjMyNTU4IC0wLjkwOTA5MDkwOSI+PC9wb2x5Z29uPgogICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDxnIGlkPSJDbGlwcGVkIj4KICAgICAgICAgICAgICAgIDxtYXNrIGlkPSJtYXNrLTYiIGZpbGw9IndoaXRlIj4KICAgICAgICAgICAgICAgICAgICA8dXNlIHhsaW5rOmhyZWY9IiNwYXRoLTUiPjwvdXNlPgogICAgICAgICAgICAgICAgPC9tYXNrPgogICAgICAgICAgICAgICAgPGcgaWQ9ImEiPjwvZz4KICAgICAgICAgICAgICAgIDxwb2x5Z29uIGlkPSJTaGFwZSIgZmlsbD0iIzM0QTg1MyIgZmlsbC1ydWxlPSJub256ZXJvIiBtYXNrPSJ1cmwoI21hc2stNikiIHBvaW50cz0iLTAuOTMwMjMyNTU4IDE1LjkwOTA5MDkgMTMuMDIzMjU1OCA1LjQ1NDU0NTQ1IDE2LjY5NzY3NDQgNS45MDkwOTA5MSAyMS4zOTUzNDg4IC0wLjkwOTA5MDkwOSAyMS4zOTUzNDg4IDIwLjkwOTA5MDkgLTAuOTMwMjMyNTU4IDIwLjkwOTA5MDkiPjwvcG9seWdvbj4KICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8ZyBpZD0iQ2xpcHBlZCI+CiAgICAgICAgICAgICAgICA8bWFzayBpZD0ibWFzay04IiBmaWxsPSJ3aGl0ZSI+CiAgICAgICAgICAgICAgICAgICAgPHVzZSB4bGluazpocmVmPSIjcGF0aC03Ij48L3VzZT4KICAgICAgICAgICAgICAgIDwvbWFzaz4KICAgICAgICAgICAgICAgIDxnIGlkPSJhIj48L2c+CiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iU2hhcGUiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIgbWFzaz0idXJsKCNtYXNrLTgpIiBwb2ludHM9IjIxLjM5NTM0ODggMjAuOTA5MDkwOSA2Ljk3Njc0NDE5IDEwIDUuMTE2Mjc5MDcgOC42MzYzNjM2NCAyMS4zOTUzNDg4IDQuMDkwOTA5MDkiPjwvcG9seWdvbj4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+">
+                      </button>
+
+                      <button class="btn btn-lg btn-primary border rounded-circle p-0 shadow-sm ml-3"
+                        style="height:50px;width:50px;background-color:#4267b2">
+                        <img class="m-auto" style="vertical-align: text-bottom"
+                          src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTFweCIgaGVpZ2h0PSIxOXB4IiB2aWV3Qm94PSIwIDAgMTEgMTkiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQ4LjIgKDQ3MzI3KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5Hcm91cDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJHcm91cCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUuMDAwMDAwLCAtMS4wMDAwMDApIj4KICAgICAgICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZSIgZmlsbD0iI0Q4RDhEOCIgb3BhY2l0eT0iMCIgeD0iMCIgeT0iMCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIj48L3JlY3Q+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMS42MzUxNTA5LDE5Ljk5OTU4ODkgTDExLjYzNTE1MDksMTEuNTAxMDM0OSBMMTQuNjQ4OTUzLDExLjUwMTAzNDkgTDE1LjEwMDIyNzEsOC4wNjg1NTQxMSBMMTEuNjM1MTUwOSw4LjA2ODU1NDExIEwxMS42MzUxNTA5LDUuODc3MTMyMDEgQzExLjYzNTE1MDksNC44ODMzNDk2MyAxMS45MTY0Nzc0LDQuMjA2MTE5NzEgMTMuMzY5MjYzNCw0LjIwNjExOTcxIEwxNS4yMjIyMjIyLDQuMjA1MzI1NDcgTDE1LjIyMjIyMjIsMS4xMzUyODcxMyBDMTQuOTAxNzYsMS4wOTM0NTY2NyAxMy44MDE4MjQ0LDEgMTIuNTIyMTM0OCwxIEM5Ljg1MDU2Njg5LDEgOC4wMjE1MzkyNiwyLjU5OTYxODExIDguMDIxNTM5MjYsNS41MzcxOTMzMSBMOC4wMjE1MzkyNiw4LjA2ODU1NDExIEw1LDguMDY4NTU0MTEgTDUsMTEuNTAxMDM0OSBMOC4wMjE1MzkyNiwxMS41MDEwMzQ5IEw4LjAyMTUzOTI2LDE5Ljk5OTU4ODkgTDExLjYzNTE1MDksMTkuOTk5NTg4OSBaIiBpZD0iZiIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=">
+                      </button>
+                    </div>
+
+                    <div class="my-3">
+                      <a href="#" id="lnkEmail" onclick="showEmail(event)">Signup with email</a>
+                      <a href="#" id="lnkMobile" style="display: none;" onclick="showPhone(event)">Signup with mobile
+                        number</a>
+                    </div>
+
+                    <div class="small d-block text-muted">
+                      By signing in, you confirm that you have read and agree to our
+                      <a href="#">Terms &amp; Conditions</a> and
+                      <a href="#">Privacy Policy</a>
+                    </div>
+                  </div>
+
                 </div>
               </div>
 
+
+
             </div>
+
+            <!-- <div class="modal-footer text-center flex-column px-5 section-or" id="divFooter">
+              
+                      </div> -->
           </div>
-
-
-
         </div>
-
-        <!-- <div class="modal-footer text-center flex-column px-5 section-or" id="divFooter">
-
-        </div> -->
       </div>
+
     </div>
+    <!-- Dark Overlay element -->
+    <div class="overlay"></div>
   </div>
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      //     $("#sidebar").mCustomScrollbar({
+      //         theme: "minimal"
+      //     });
+
+      $('#dismiss, .overlay').on('click', function () {
+        // hide sidebar
+        $('#sidebar').removeClass('active');
+        // hide overlay
+        $('.overlay').removeClass('active');
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        // open sidebar
+        $('#sidebar').addClass('active');
+        // fade in the overlay
+        $('.overlay').addClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
+
+
 </body>
 
 </html>
